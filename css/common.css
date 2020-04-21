@@ -1,0 +1,74 @@
+/* 구글웹폰트 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap') ;
+
+/* 공통 사항 */
+* {
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, p{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 14px;
+	color: #2F3138;
+}
+
+input {
+	outline: none;
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+li{
+	list-style: none;
+}
+/*배경 색상*/
+.bg-color1{
+	/*대표 색상*/
+	background-color: #E50020;
+}
+
+
+
+
+/*배경 + 버튼 색상*/
+.bg-color2{
+	background-color: #3A3A3A;
+}
+.btn-color2{
+	background-color: #656464;
+}
+
+
+
+/*버튼 + 테두리색상*/
+.btn-color3{
+	background-color: #E0E0E0;
+}
+.line-color3{
+	background-color: #D1D5D9;
+}
+
+
+
+
+/*버튼색상*/
+.btn-color4{
+	background-color: #9E9E9E;
+}
+
+.btn-color5{
+	background-color: #7D8E9E;
+}
+
+.btn-color6{
+	background-color: #333333;
+}
