@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://kit.fontawesome.com/825f57de13.js" crossorigin="anonymous"></script>
+	<title>ranking-detailview</title>
+<link rel="stylesheet" type="text/css" href="../../sosulmate/css/common.css">
+<style type="text/css">
+a{
+	text-decoration: none;
+	color : inherit;
+}
+section {
+	display: block;
+}
+article{
+	display: block;
+}
+/*전체*/
+.sosul_detail_view_wrap{
+	width: 100%;
+	margin: 0 auto;
+}
+/*상단바*/
+.ranking_menu_wrap{
+	width: 100%;
+}
+
+.ranking_menu_genre_wrap{
+	position: relative;
+	height: 52px;
+	border-top : 1px solid #656464;
+	border-bottom : 1px solid #656464;
+	display: flex;
+	line-height: 48px;
+}
+
+.ranking_menu_plat_contain{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.ranking_menu_plat_contain > ul {
+	list-style: none;
+	padding : 0;
+	margin : 0;
+	position: relative;
+}
+.ranking_menu_plat_contain > ul > li {
+	position: relative;
+	border : 0;
+	display: inline-block;
+	float: none;
+	padding: 0 2px;
+	transition: all .3s ease;
+
+
+}
+.ranking_menu_plat_contain > ul > li > a {
+	border-radius: 50px;
+	position: relative;
+	padding : 6px 16px;
+	font-size: 13px;
+	line-height: 12px;
+	color: #565656;
+	font-weight: 500;
+	border : 2px solid transparent;
+
+}
+
+.ranking_menu_plat_contain > ul > li:hover>a {
+	border-width: 2px;
+	border-style: solid;
+	border-color : #E50020;
+	color : #E50020;
+}
+
+/*본문*/
+.sosul_view_content{
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	min-height: 500px;
+}
+.sosul_page_detail{
+	width: 1000px;
+	margin : 0 auto 60px auto;
+	border-top : none;
+}
+.page_detail_wrap{
+	display: table;
+	width: 1000px;
+}
+.sosul_detail_body_wrap{
+	width: 1000px;
+	display: table-cell;
+	vertical-align: top;
+}
+.sosul_detail_body{
+	width: 1000px;
+	padding-bottom: 95px;
+	border : 1px solid red;
+}
+.sosul_detail_header{
+	padding : 40px 29px;
+}
+
+/*info 부분*/
+.sosul_header_info_wrap{
+	width: 680px;
+	float : right;
+	border : 1px solid black;
+}
+
+/*이미지부분*/
+.sosul_thumbnail_wrap{
+	width: 220px;
+	float : left;
+	border-bottom : 1px solid #656464;
+
+}
+.detail_thumbnail_wrap{
+	width: 200px;
+}
+.sosul_detail_img{
+	display: inline-block;
+	position: relative;
+	height: auto;
+}
+.thumbnail_detail_img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.thumbnail_img{
+	width: 200px;
+	max-height: 313px;
+}
+.thumbnail_border{
+	box-sizing: border-box;
+	opacity: .1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left : 0;
+	top : 0;
+	z-index: 3;
+	border : 1px solid #000;
+}
+
+/*이미지아래 하트*/
+.detail_sosul_good{
+	margin-top : 12px;
+	width: 200px;
+	text-align: center;
+}
+.sosul_good_btn{
+	width: 130px;
+	padding-bottom: 5px;
+	margin : 0;
+	outline: 0;
+	text-decoration : none;
+	box-sizing: border-box;
+	border : 0px solid white;
+	font-weight: 700;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	line-height: 1em;
+	vertical-align: baseline;
+	background-color: white;
+
+}
+.good_heart_icon{
+	width: 30px;
+	height: 30px;
+	vertical-align: -60%;
+	display: inline-block;
+	text-indent: -444px;
+	font-size: 0;
+	overflow: hidden;
+	
+	background: url(../../sosulmate/img/icons8-heart-50.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+.good_heart_cnttext{
+	font-size: 16px;
+	color: #666;
+	padding-left: 3px;
+	font-weight: 600;
+
+}
+
+/*연재사이트*/
+.sosul_detail_palce_wrap{
+	position: relative;
+	display: flex;
+	padding-top : 5px;
+
+}
+.sosul_detail_palce{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.sosul_detail_palce > ul {
+	list-style: none;
+	padding : 0;
+	margin : 0;
+	position: relative;
+}
+.sosul_detail_palce > ul > li {
+	position: relative;
+	border : 0;
+	display: inline-block;
+	float: none;
+	padding: 0 2px;
+	transition: all .3s ease;
+
+
+}
+.sosul_detail_palce > ul > li > a {
+	border-radius: 50px;
+	position: relative;
+	display: flex;
+	padding : 4px 5px;
+	font-size: 10px;
+	line-height: 12px;
+	color: #666;
+	font-weight: 500;
+	border : 1px solid #666;
+	
+}
+/*공유하기*/
+.sosul_detail_palce_wrap{
+	width: 100%;
+	height: 40px;
+
+}
+.sosul_share_sns{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+.sosul_share_sns > a{
+	
+	padding-right: 10px;
+}
+.sosul_share_sns > a > img{
+	width: 30px;
+	height : 30px;
+}
+
+
+
+</style>
+</head>
+<body>
+	<div class="sosul_detail_view_wrap">
+		<div class="ranking_menu_wrap">
+			<div class="ranking_menu_genre">
+				<div class="ranking_menu_genre_wrap">
+					<div class="ranking_menu_plat_contain">
+						<ul>
+							<li>
+								<a href="">전체</a>
+							</li>
+							<li>
+								<a href="">로맨스</a>
+							</li>
+							<li>
+								<a href="">로맨스판타지</a>
+							</li>
+							<li>
+								<a href="">BL</a>
+							</li>
+							<li>
+								<a href="">판타지</a>
+							</li>
+							<li>
+								<a href="">무협</a>
+							</li>
+							<li>
+								<a href="">라이트노벨</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+				
+		<div class="sosul_detail_view_contentwrap">
+			<div class="sosul_view_content">
+				<div>
+					<div class="sosul_page_detail">
+						<div class="page_detail_wrap">
+							<div class="sosul_detail_body_wrap">
+								<section class="sosul_detail_body">
+									<h1 class="">소설제목인디 히든이여~</h1>
+									<article class="sosul_detail_header">
+										<div class="sosul_header_info_wrap"></div>
+										<div class="sosul_thumbnail_wrap"> 
+											<div class="detail_thumbnail">
+												<div class="detail_thumbnail_wrap">
+													<div class="sosul_detail_img">
+														<div class="thumbnail_detail_img">
+															<img class="thumbnail_img" src="../../sosulmate/img/resource.jpg">
+															<span class="thumbnail_border"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="detail_sosul_good">
+												<button type="button" class="sosul_good_btn">
+													<span class="good_btn_content">
+														<span class="good_heart_icon"></span>
+														<span class="good_heart_cnttext">1000</span>
+													</span>													
+												</button>
+											</div>
+											<div class="sosul_detail_palce_wrap">
+											<div class="sosul_detail_palce">
+												<ul>
+													<li><a href="">카카오</a></li>
+													<li><a href="">시리즈</a></li>
+													<li><a href="">문피아</a></li>
+													<li><a href="">RIDI</a></li>
+												</ul>
+											</div>
+											</div>
+											<div class="sosul_share_sns_wrap">
+												<div class="sosul_share_sns">
+													<a href=""><img src="../../sosulmate/img/kakao.png"></a>
+													<a href=""><img src="../../sosulmate/img/facebook_logo.png"></a>
+													<a href=""><img src="../../sosulmate/img/twitter.png"></a>
+												</div>
+											</div>
+										</div>
+										<div class="sosul_detail_review"></div>
+										
+									</article>									
+								</section>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+
+			
+		</div>	
+
+		
+	</div>
+
+</body>
+</html>
