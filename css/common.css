@@ -1,0 +1,234 @@
+/* 구글웹폰트 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap') ;
+
+/* 공통 사항 */
+* {
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, p{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 16px;
+	color: #2F3138;
+}
+
+input, button {
+	outline: none;
+	cursor: pointer;
+}
+
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+li{
+	list-style: none;
+}
+
+/*배경 색상*/
+.bg-color1{
+	/*대표 색상*/
+	background-color: #E50020;
+}
+/*배경 + 버튼 색상*/
+.bg-color2{
+	background-color: #3A3A3A;
+}
+.btn-color2{
+	background-color: #656464;
+}
+/*버튼 + 테두리색상*/
+.btn-color3{
+	background-color: #E0E0E0;
+}
+.line-color3{
+	background-color: #D1D5D9;
+}
+/*버튼색상*/
+.btn-color4{
+	background-color: #9E9E9E;
+}
+.btn-color5{
+	background-color: #7D8E9E;
+}
+.btn-color6{
+	background-color: #333333;
+}
+
+/*작은 버튼*/
+.smallBtn_red{
+	padding: 7px 14px;	
+	border-radius: 6px;
+	border: 1px solid #E50020;
+	background-color: #E50020;
+	color: white;
+}
+.smallBtn_white{
+	padding: 7px 14px;	
+	border-radius: 6px;
+	border: 1px solid #E50020;
+	background-color: white;
+	color: #E50020;
+}
+.smallBtn_grey{
+	padding: 7px 14px;	
+	border-radius: 6px;
+	border: 1px solid #D1D5D9;
+	background-color: white;
+	color: #D1D5D9;
+}
+
+/*중간 버튼*/
+.middleBtn_red{
+	width: 152px;
+    height: 57px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #E50020;
+    color: white;
+    font-size: 18px;
+    margin: -5px 0px 13px 0px;
+
+}
+.middleBtn_white{
+    width: 152px;
+    height: 57px;
+    border: 1px solid #E50020;
+    border-radius: 5px;
+    background-color: white;
+    color: #E50020;
+    font-size: 18px;
+    margin: -5px 0px 13px 0px;
+}
+.middleBtn_grey{
+    width: 152px;
+    height: 57px;
+    border: 1px solid #D1D5D9;
+    border-radius: 5px;
+    background-color: white;
+    color: #D1D5D9;
+    font-size: 18px;
+    margin: -5px 0px 13px 0px;
+}
+
+/*큰 버튼*/
+.largeBtn_red{
+	border: none;
+	width: 330px;
+	height: 50px;
+	background-color: #E50020;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 5px;
+}
+.largeSearchBtn_white{
+	border: 1px solid #E50020;
+	width: 330px;
+	height: 50px;
+	background-color: white;
+	color: #E50020;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 5px;
+}
+.largeBtn_grey{
+	border: none;
+	width: 330px;
+	height: 50px;
+	background-color: #D1D5D9;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+/*입력창*/
+input.smallInput{
+	padding: 10px 10px 10px 15px;	
+	border: 1px solid #D1D5D9;
+	border-radius: 3px;
+	width: 200px;
+}
+
+/*에러메세지 */
+.errorMessage{
+	visibility: hidden;
+	color: red;
+}
+
+/*검색창*/
+.smallSearch{
+	border: 1px solid #D1D5D9;
+    border-radius: 6px;
+    color: #888;
+    font-size: 13px;
+    width: 230px;
+    height: 30px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+.smallSearch > i{
+	position: absolute;
+    left: 9px;
+    top: 8px;
+    color: #656464;
+}
+.smallSearch > input{
+	position: relative;
+	border: 1px solid #fff;
+    border-radius: 6px;
+    color: #888;
+    font-size: 13px;
+    width: 185px;
+    height: 27px;
+    padding-left: 40px;
+    padding-right: 20px;
+    outline: none;
+}
+
+
+.largeSearch{
+	border: 1px solid #D1D5D9;
+    border-radius: 6px;
+    color: #888;
+    font-size: 15px;
+    width: 660px;
+    height: 42px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.largeSearch > i{
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: #656464;
+}
+
+.largeSearch > input{
+	border: 1px solid #fff;
+    border-radius: 6px;
+    color: #888;
+    font-size: 15px;
+    height: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
+    width: 610px;
+    outline: none;
+}
+
+a.btn {
+	border: 1px solid #9E9E9E;
+	color: #9E9E9E;
+	border-radius: 10px;
+	padding: 2px 5px;
+	font-size: 11px;
+}
