@@ -20,11 +20,13 @@ body {
 	color: #2F3138;
 }
 
-input, button {
+input, button, textarea {
 	outline: none;
-	cursor: pointer;
 }
 
+button {
+	cursor: pointer;
+}
 
 a{
 	text-decoration: none;
@@ -169,11 +171,13 @@ input.largeInput{
 	border-radius: 3px;
 	width: 610px;
 }
+
 /*에러메세지 */
 .errorMessage{
-	visibility: hidden;
+	display: none;
 	color: red;
-	font-size: 14px;
+	font-size: 12px;
+	padding-left: 10px;
 }
 
 /*검색창*/
@@ -224,12 +228,25 @@ input.largeInput{
 }
 
 /*신고, 좋아요 등 기능 버튼*/
-a.actionBtn {
+.actionBtn_grey {
+	display: inline-block;
 	border: 1px solid #666;
 	color: #666;
 	border-radius: 10px;
 	padding: 2px 7px;
+	margin: 2px;
 	font-size: 11px;
+}
+.actionBtn_red {
+	display: inline-block;
+	border: 1px solid #E50020;
+	color: white;
+	background-color: #E50020;
+	border-radius: 10px;
+	padding: 2px 7px;
+	margin: 2px;
+	font-size: 11px;
+
 }
 
 /*상단 메뉴*/
