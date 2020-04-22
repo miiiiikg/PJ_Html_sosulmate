@@ -69,6 +69,7 @@ li{
 	border: 1px solid #E50020;
 	background-color: #E50020;
 	color: white;
+	font-size: 15px;
 }
 .smallBtn_white{
 	padding: 7px 14px;	
@@ -76,6 +77,7 @@ li{
 	border: 1px solid #E50020;
 	background-color: white;
 	color: #E50020;
+	font-size: 15px;
 }
 .smallBtn_grey{
 	padding: 7px 14px;	
@@ -83,6 +85,7 @@ li{
 	border: 1px solid #D1D5D9;
 	background-color: white;
 	color: #D1D5D9;
+	font-size: 15px;
 }
 
 /*중간 버튼*/
@@ -100,7 +103,7 @@ li{
 .middleBtn_white{
     width: 152px;
     height: 57px;
-    border: 1px solid #E50020;
+    border: 1px solid white;
     border-radius: 5px;
     background-color: white;
     color: #E50020;
@@ -120,7 +123,7 @@ li{
 
 /*큰 버튼*/
 .largeBtn_red{
-	border: none;
+	border: 1px solid #E50020;
 	width: 330px;
 	height: 50px;
 	background-color: #E50020;
@@ -130,7 +133,7 @@ li{
 	border-radius: 5px;
 }
 .largeSearchBtn_white{
-	border: 1px solid #E50020;
+	border: 1px solid white;
 	width: 330px;
 	height: 50px;
 	background-color: white;
@@ -162,10 +165,26 @@ input.smallInput{
 .errorMessage{
 	visibility: hidden;
 	color: red;
+	font-size: 14px;
 }
 
 /*검색창*/
-.smallSearch{
+/*
+	<div class="help_search_input">
+		<i class="fas fa-search"></i>
+   		<input type="text" name="" placeholder="검색">
+	</div>
+*/
+.smallSearch, .largeSearch{
+    position: relative;
+}
+.smallSearch > i{
+	position: absolute;
+    left: 12px;
+    top: 8px;
+    color: #656464;
+}
+.smallSearch > input{
 	border: 1px solid #D1D5D9;
     border-radius: 6px;
     color: #888;
@@ -174,61 +193,114 @@ input.smallInput{
     height: 30px;
     padding-left: 40px;
     padding-right: 20px;
-}
-.smallSearch > i{
-	position: absolute;
-    left: 9px;
-    top: 8px;
-    color: #656464;
-}
-.smallSearch > input{
-	position: relative;
-	border: 1px solid #fff;
-    border-radius: 6px;
-    color: #888;
-    font-size: 13px;
-    width: 185px;
-    height: 27px;
-    padding-left: 40px;
-    padding-right: 20px;
     outline: none;
-}
-
-
-.largeSearch{
-	border: 1px solid #D1D5D9;
-    border-radius: 6px;
-    color: #888;
-    font-size: 15px;
-    width: 660px;
-    height: 42px;
-    padding-left: 40px;
-    padding-right: 20px;
 }
 
 .largeSearch > i{
     position: absolute;
     left: 14px;
-    top: 14px;
+    top: 12px;
     color: #656464;
 }
 
 .largeSearch > input{
-	border: 1px solid #fff;
+	border: 1px solid #D1D5D9;
     border-radius: 6px;
     color: #888;
     font-size: 15px;
+    width: 610px;
     height: 40px;
     padding-left: 40px;
     padding-right: 20px;
-    width: 610px;
     outline: none;
 }
 
-a.btn {
-	border: 1px solid #9E9E9E;
-	color: #9E9E9E;
+/*신고, 좋아요 등 기능 버튼*/
+a.actionBtn {
+	border: 1px solid #666;
+	color: #666;
 	border-radius: 10px;
-	padding: 2px 5px;
+	padding: 2px 7px;
 	font-size: 11px;
+}
+
+/*상단 메뉴*/
+/*
+<div class="topmenu_wrap">
+	<div class="topmenu_Bar">
+		<div class="topmenu_contain">
+			<ul>
+				<li><a href="">자유</a></li>
+				<li><a href="">후기</a></li>
+				<li><a href="">작품공지</a></li>
+				<li><a href="">작가토크</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+*/
+.menubar{
+	position: relative;
+	display: flex;
+	height: 52px;
+	border-top : 1px solid #656464;
+	border-bottom : 1px solid #656464;
+	line-height: 48px;
+}
+
+a.topmenuBtn{
+	border : 2px solid transparent;
+	border-radius: 50px;
+	padding : 6px 16px;
+	color: #565656;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 12px;
+}
+
+/*상단바*/
+.topmenu_wrap{
+   width: 100%;
+}
+.topmenu_Bar{
+	display: flex;
+	position: relative;
+	height: 52px;
+	border-top : 1px solid #656464;
+	border-bottom : 1px solid #656464;
+	line-height: 48px;
+}
+
+.topmenu_contain{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto; 
+	text-align: center;
+}
+.topmenu_contain > ul {
+	position: relative;
+}
+.topmenu_contain > ul > li {
+	position: relative;
+	display: inline-block;
+	border : none;
+	padding: 0 2px;
+	transition: all .3s ease;
+}
+.topmenu_contain > ul > li > a {
+	position: relative;
+	padding : 6px 16px;
+	font-size: 13px;
+	font-weight: 500;
+	color: #565656;
+	line-height: 12px;
+	border : 2px solid transparent;
+	border-radius: 50px;
+}
+
+.topmenu_contain > ul > li:hover>a {
+	border: 2px solid #E50020;
+	color : #E50020;
 }
