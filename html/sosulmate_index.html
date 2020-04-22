@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sosulmate_index</title>
+	<link rel="stylesheet" type="text/css" href="../sosulmate/common.css">
+	<script src="https://kit.fontawesome.com/83b564820d.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		.index_best_wrap {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding-top: 24px;
+			padding-bottom: 24px;
+			position: relative;
+		}
+		.best_title {
+			font-size: 20px;
+		}
+		.book_content_book {
+			/*책 리스트 순서 정렬 grid*/
+			display: grid;
+			grid: repeat(3,138px) /auto-flow 308px;
+			grid-column-gap: 13px;
+			padding-top: 20px;
+			padding-right: 20px;
+		}
+		.best_content_book {
+			position: relative;
+		}
+		.book_list {
+			display: flex;
+			align-items: center;
+			box-sizing: content-box;
+		}
+		.book_img_small {
+			position: relative;
+			line-height: 0;
+			max-height: inherit;
+		}
+		.book_img_list {
+			width: 80px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		.book_img_big {
+			flex : none;
+			margin-right: 18px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			-webkit-box-pack : center;
+			justify-content: center;
+			position: relative;
+		}
+		.book_meta_box {
+			display: flex;
+			-webkit-box-align : center;
+			align-items: center;
+			border-bottom: 1px solid #E0E0E0;
+			height: 148px;
+			width: 180px;
+		}
+		.book_ranking {
+			height: 22px;
+			font-size: 18px;
+			font-weight: 700;
+			text-align: center;
+			color: #000000;
+			margin-right: 21px;
+		}
+		.book_text_title {
+			font-size: 14px;
+		}
+		.book_writer {
+			height: 19px;
+			font-size: 14px;
+			line-height: 1.36;
+			color: #636C73;
+			margin-bottom: 2px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+		}
+		.book_average_list {
+			height: 10px;
+			font-size: 11px;
+			line-height: 1.09;
+			color : #999999;
+		}
+		.book_basic_star {
+			position: relative;
+			margin-right: 2px;
+			line-height: 0;
+		}
+		.book_star {
+			width: 50px;
+			height: 10px;
+		}
+		.book_yellow_star {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+
+	</style>
+</head>
+<body>
+	<div class ="index_best_wrap">
+		<h2 class="best_title">
+			<a href="#">베스트셀러</a>
+			<i class="fas fa-angle-right"></i>
+		</h2>
+		<div class="best_content_book">
+			<ul class="book_content_book">
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">1</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">더 해빙</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">이서윤</a>,<a href="#">홍주연</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">133</span>
+								</div>
+
+							</span>
+						</div>
+					</div>
+				</li>
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge2.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">2</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">지적 대화를 위한 넓고 얕은 지식 제로</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">채사장</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">81</span>
+								</div>
+
+							</span>
+						</div>
+					</div>
+				</li>
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge 3.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">3</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">날씨가 좋으면 찾아가겠어요</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">이도우</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">455</span>
+								</div>
+							</span>
+						</div>
+					</div>
+				</li>
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge4.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">4</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">IQ84세트</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">무라카미 하루키</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">4</span>
+								</div>
+							</span>
+						</div>
+					</div>
+				</li>
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge5.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">5</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">존리의 부자되기 습관</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">존리</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">63</span>
+								</div>
+							</span>
+						</div>
+					</div>
+				</li>
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge6.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">6</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">더 해빙</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">이서윤</a>,<a href="#">홍주연</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">133</span>
+								</div>
+							</span>
+						</div>
+					</div>
+				</li>
+
+				<li type="big" class="book_list">
+					<a href="#" class="book_img_big">
+						<div class="book_img_small">
+							<img src="../sosulmate/sosulmate_img/index 예시 이미지/xxlarge7.jpg" class="book_img_list">
+						</div>
+					</a>
+					<div class="book_meta_box">
+						<h3 class="book_ranking">7</h3>
+						<div class="book_content_list">
+							<a href="#">
+								<div class="book_text_title">기사단장 죽이기 세트</div>
+							</a>
+							<span class="book_writer">
+								<a href="#">무라카미 하루키</a>
+							</span>
+							<span>
+								<div class="book_average_star">
+									<div class="book_basic_star">
+										<img src="https://books.ridicdn.net/_next/static/images/NoStarRating-c478df104f4861a50a39308a1d889466.svg" class="book_star">
+										<div class="book_yellow_star" style="width: 43px;">
+											<img src="https://books.ridicdn.net/_next/static/images/StarRating-92a4a66c7699e6a0ccaa5ef7aa3c3529.svg" class="book_star">
+										</div>
+									</div>
+									<span class="book_average_list">2</span>
+								</div>
+							</span>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

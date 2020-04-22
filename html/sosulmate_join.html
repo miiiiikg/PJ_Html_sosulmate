@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>sosulmate_join</title>
+	<link rel="stylesheet" type="text/css" href="../sosulmate/common.css">
 	<style type="text/css">
 		a {
 			color: inherit;
@@ -9,7 +10,6 @@
 		}
 		header, section {
 			padding : 40px 0px 2px;
-			text-align: center;
 		}
 		.join_wrap {
 			width: 100%;
@@ -21,8 +21,10 @@
 		.join_title {
 			padding-top: 30px;
 			font-size: 20px;
+			text-align: center;
 		}
-		.header_login_div {
+		.header_join_div {
+			text-align: center;
 			display: block;
 			width: 260px;
 			height: 130px;
@@ -35,8 +37,6 @@
 		.join_row {
 			background-color: white;
 			border: 1px solid #D1D5D9;
-			height: 27px;
-			margin-bottom: 23px;
 			padding : 10px 10px 10px 10px;
 		}
 		.join_box {
@@ -48,44 +48,22 @@
 			border-width: 0px;
 			height: 28px;
 		}
-		#btn_email {
-			display: block;
-			background-color: #D1D5D9;
-			color: white;
-			font-size: 18px;
-			height: 50px;
-			text-align: center;
-			padding-top: 2px;
-			line-height: 46px;
-			text-decoration: none;
-			margin: 8px 0px 8px 0px;
-			border-radius: 5px;
-		}
-		.error_next_box {
-			text-align: left;
-			display: block;
-			margin: 11px 0 -2px;
-			font-size: 12px;
-			line-height: 14px;
-			color: red;
-			height: 15px;
-			/*display: none;*/
-		}
 		.btn_join_mail {
-			padding-top: 1px;
+			padding-top: 5px;
 			padding-bottom: 12px;
 		}
 		.join_pwpw {
 			background-color: white;
 			border: 1px solid #D1D5D9;
-			height: 27px;
 			padding : 10px 10px 10px 10px;
 		}
+		.join_pwbox {
+			padding-top: 15px;
+		}
 		.join_check_content {
-			/*border: 1px solid red;*/
 			background-color: white;
 			height: 160px;
-			margin: 30px 0 30px;
+			margin: 15px 0 30px;
 		}
 		.join_list_content {
 			border: 1px solid #D1D5D9;
@@ -98,36 +76,6 @@
 			margin-bottom: 15px;
 			display: flex;
 			justify-content: space-between; 
-		}
-		.btn_cancel {
-			width: 152px;
-			display: block;
-			border: 1px solid #D1D5D9;
-			background-color: white;
-			color: black;
-			font-size: 18px;
-			height: 57px;
-			text-align: center;
-			padding-top: 2px;
-			line-height: 54px;
-			text-decoration: none;
-			margin: -5px 0px 13px 0px;
-			border-radius: 5px;
-		}
-		.btn_agree {
-			width: 152px;
-			display: block;
-			background-color: #E50020;
-			color: white;
-			font-size: 18px;
-			height: 57px;
-			text-align: center;
-			padding-top: 2px;
-			line-height: 54px;
-			text-decoration: none;
-			margin: -5px 0px 13px 0px;
-			border-radius: 5px;
-			margin-left: 25px;
 		}
 		.btn_double_area {
 			display: flex;
@@ -143,7 +91,7 @@
 		<div class="join_wrap">
 			<div class="join_content">
 				<header>
-					<div id="header_login_div">
+					<div id="header_join_div" style="text-align: center;">
 						<a href="#"><img alt= "로고이미지"></a>
 					</div>
 					<div class="join_title">이메일로 회원가입</div>
@@ -155,11 +103,11 @@
 							<span class="join_box">
 								<input type="text" id="id" name="id" placeholder="이메일" class="input_join">
 							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
 						</div>
+						<span class="errorMessage">필수 정보입니다.</span>
 
 						<div class="btn_join_mail">
-							<a href="#" id="btn_email">인증메일 발송</a>
+							<button class="largeBtn_grey" type="button">인증메일 발송</button>
 						</div>
 						
 						<div class="join_textbox">
@@ -167,21 +115,23 @@
 								<span class="join_box">
 									<input type="text" class="input_join" placeholder="닉네임">
 								</span>
-								<span class="error_next_box">필수 정보입니다.</span>
 							</div>
+							<div><span class="errorMessage">필수 정보입니다.</span></div>
+								
+							<div class="join_pwbox">	
+								<div class="join_pwpw">
+									<span class="join_box">
+										<input type="password" class="input_join" placeholder="비밀번호">
+									</span>
+								</div>
 
-							<div class="join_pwpw">
-								<span class="join_box">
-									<input type="password" class="input_join" placeholder="비밀번호">
-								</span>
-							</div>
-
-							<div class="join_pwpw">
-								<span class="join_box">
-									<input type="password" class="input_join" placeholder="비밀번호 재확인">
-								</span>
-								<span class="error_next_box">필수 정보입니다.</span>
-							</div>
+								<div class="join_pwpw">
+									<span class="join_box">
+										<input type="password" class="input_join" placeholder="비밀번호 재확인">
+									</span>
+								</div>
+								<span class="errorMessage">필수 정보입니다.</span>
+								</div>
 
 							<div class="join_check_content">
 								<div class="join_list_content">
@@ -206,10 +156,10 @@
 						
 							<div class="btn_double_area">	
 								<div>
-									<a href="#" class="btn_cancel">취소</a>
+									<button class="middleBtn_white" type="button">취소</button>
 								</div>
-								<div>
-									<a href="#" class="btn_agree">회원가입</a>
+								<div style="padding-left: 28px;">
+									<button class="middleBtn_red" type="button">회원가입</button>
 								</div>
 							</div>
 						</div>
