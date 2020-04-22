@@ -22,7 +22,10 @@
 			height: 100%;
 			margin: 0 auto;
 		}
-		.help_header_nav a{
+		.help_header_navTitle{
+			vertical-align: middle;
+		}
+		.help_header_navTitle > a{
 			border: 0;
 			text-decoration: none;
 			color: #fff;
@@ -30,9 +33,6 @@
 			font-size: 18px;
 			line-height: 1;
 			width: auto;
-		}
-		.help_header_navTitle{
-			vertical-align: middle;
 		}
 		.help_header_titleLogo{
 			position: relative;
@@ -49,12 +49,12 @@
 			height: 17px;
 			background-color: #fff;
 		}
-		.help_header_navBtnBox > a{
-			font-size: 15px;
-			line-height: 13px;
-			border-radius: 4px;
-			border: solid 2px #fff;
-			padding: 7px 14px;
+		.smallBtn_red{
+			border: 2px solid white;
+			padding: 6px 14px;
+		}
+		.smallBtn_white{
+			border: 2px solid #E50020;
 		}
 		.navBtn_request{
 			background-color: #fff;
@@ -70,8 +70,8 @@
 				<a href="#">고객센터</a>
 			</div>
 			<div class="help_header_navBtnBox">
-				<a href="#">문의내역</a>
-				<a href="#" class="navBtn_request" style="color: #E50020;">문의하기</a>
+				<a href="#" class="smallBtn_red">문의내역</a>
+				<a href="#" class="smallBtn_white">문의하기</a>
 			</div>
 		</div>
 	</header>

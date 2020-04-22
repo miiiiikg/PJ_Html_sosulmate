@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>일대일문의</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="help_common.css">
+	<script src="https://kit.fontawesome.com/e2a7455480.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.help_common_content_wrap > h1{
+			text-align: inherit;
+		}
+		.answer_inputBox{
+			padding-bottom: 14px;
+		}
+		.answer_info{
+			padding-bottom: 7px;
+		}
+		textarea, .dragdrop{
+			padding: 10px 10px 10px 15px;	
+			border-radius: 3px;
+			width: 610px;
+		}
+		textarea{
+			border: 1px solid #D1D5D9;
+			min-height: 120px;
+			resize: vertical;
+		}
+		.dragdrop{
+			cursor: pointer;
+			text-align: center;
+			color: #656464;
+			font-size: 14px;
+			height: 70px;
+			line-height: 44px;
+			border: 1px dashed #D1D5D9;
+		}
+		.answer_btn{
+			margin-top: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="answer_all_wrap">
+		<div class="help_common_nav_wrap">
+			<ul class="help_common_nav_list">
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">공지사항</a></li>
+			</ul>
+			<form method="" action="">
+				<div class="smallSearch">
+					<i class="fas fa-search"></i>
+					<input type="text" name="" placeholder="검색">
+				</div>
+			</form>
+		</div>
+		<div class="help_common_content_wrap">
+			<h1>문의하기</h1>
+			<form method="" action="">
+				<div class="answer_inputBox">
+					<div class="answer_info">이메일<span class="highlight">*</span></div>
+					<input type="" name="" class="largeInput">
+					<div class="errorMessage">필수 정보입니다.</div>
+				</div>
+				<div class="answer_inputBox">
+					<div class="answer_info">제목<span class="highlight">*</span></div>
+					<input type="" name="" class="largeInput">
+					<div class="errorMessage">필수 정보입니다.</div>
+				</div>
+				<div class="answer_inputBox">
+					<div class="answer_info">상세 설명<span class="highlight">*</span></div>
+					<textarea></textarea>
+					<div class="errorMessage">필수 정보입니다.</div>
+				</div>
+				<div class="answer_inputBox">
+					<div class="answer_info">연락 수단<span class="highlight">*</span></div>
+					<input type="" name="" class="largeInput">
+					<div class="errorMessage">필수 정보입니다.</div>
+				</div>
+				<div class="answer_inputBox">
+					<div class="answer_info">첨부파일</div>
+					<div class="dragdrop">
+						<div class="">
+							<p>파일을 여기로 드래그</p>
+						</div>
+						<ul class="mailbox-attachments clearfix uploadedList"></ul>
+					</div>
+				</div>
+				<div>
+					<button class="middleBtn_red answer_btn">제출</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).on('focus','.answer_inputBox',function(){
+		$(this).children('.largeInput').css('border','1px solid #E50020');
+		$(this).children('textarea').css('border','1px solid #E50020');
+	});
+</script>
+</html>

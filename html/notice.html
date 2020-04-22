@@ -16,16 +16,7 @@
 			padding: 15px 7px;
 			cursor: pointer;
 		}
-		.highlight_new{
-			display: inline-block;
-			margin-left: 4px;
-			width: 24px;
-			height: 14px;
-			line-height: 11px;
-			color: red;
-			font-size: 15px;
-			font-weight: bold;
-			vertical-align: middle;
+		.twinkle{
 			animation-name: twinkle;
 			animation-iteration-count: infinite;
 			animation-duration: 4s;
@@ -43,7 +34,7 @@
 		.faq_btnBox > div{
 			padding: 0 85px;
 			border: 1px solid #E50020;
-			border-radius: 4px;
+			border-radius: 5px;
 			color: #E50020;
 			font-size: 16px;
 			font-weight: bold;
@@ -56,6 +47,11 @@
 			margin-top: 40px;
 			display: none;
 		}
+		.search_result{
+			display: none;
+			font-style: italic;
+			margin: 0 0 10px;
+		}
 	</style>
 </head>
 <body>
@@ -67,7 +63,7 @@
 				<li><a href="#">공지사항</a></li>
 			</ul>
 			<form method="" action="">
-				<div class="help_common_search_input">
+				<div class="smallSearch">
 					<i class="fas fa-search"></i>
 					<input type="text" name="" placeholder="검색">
 				</div>
@@ -75,6 +71,7 @@
 		</div>
 		<div class="help_common_content_wrap">
 			<h1>공지사항</h1>
+			<div class="search_result">""에 대한 개의 결과</div>
 			<div class="faq_btnBox">
 				<div><a href="#">회원가입</a></div>
 				<div><a href="#">활용 도움말</a></div>
@@ -86,14 +83,14 @@
 					<li>
 						<a href="#">
 							[공지] 소설메이트에서 공지합니다.
-							<span class="highlight_new">New</span>
+							<span class="highlight twinkle">New</span>
 						</a>
 					</li>
 					<li><a href="#">[공지] 필요한 기능을 받습니다.	</a></li>
 					<li>
 						<a href="#">
 							[안내] 04월 06일 시스템 점검
-							<span class="highlight_new">New</span>
+							<span class="highlight twinkle">New</span>
 						</a>
 					</li>
 				</ul>
@@ -104,14 +101,14 @@
 					<li>
 						<a href="#">
 							[공지] 소설메이트에서 공지합니다.
-							<span class="highlight_new">New</span>
+							<span class="highlight twinkle">New</span>
 						</a>
 					</li>
 					<li><a href="#">[공지] 필요한 기능을 받습니다.	</a></li>
 					<li>
 						<a href="#">
 							[안내] 04월 06일 시스템 점검
-							<span class="highlight_new">New</span>
+							<span class="highlight twinkle">New</span>
 						</a>
 					</li>
 				</ul>
@@ -122,14 +119,14 @@
 					<li>
 						<a href="#">
 							[공지] 소설메이트에서 공지합니다.
-							<span class="highlight_new">New</span>
+							<span class="highlight twinkle">New</span>
 						</a>
 					</li>
 					<li><a href="#">[공지] 필요한 기능을 받습니다.	</a></li>
 					<li>
 						<a href="#">
 							[안내] 04월 06일 시스템 점검
-							<span class="highlight_new">New</span>
+							<span class="highlight twinkle">New</span>
 						</a>
 					</li>
 				</ul>
@@ -146,7 +143,11 @@
 			$('.help_common_content_wrap > h1').text('자주 묻는 질문');
 			$('.faq_btnBox').css('display','flex');
 			$('.notice_content_box > h2').css('display','block');
-		};
+		}else if(type == 'search'){
+			$('.help_common_nav_list li:nth-child(2) > a').text('검색결과');
+			$('.help_common_content_wrap > h1').text('검색 결과');
+			$('.search_result').css('display','block');
+		}
 	});
 </script>
 </html>
