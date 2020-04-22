@@ -102,8 +102,9 @@ article{
 }
 .sosul_detail_body{
 	width: 1000px;
+	height: 100%;
 	padding-bottom: 95px;
-	border : 1px solid red;
+	border : 0px solid red;
 }
 .sosul_detail_header{
 	padding : 40px 29px;
@@ -111,10 +112,11 @@ article{
 
 /*info 부분*/
 .sosul_header_info_wrap{
-	height: auto;
-	width: 680px;
+
+	height: 100%;
+	width: 700px;
 	float : right;
-	border : 1px solid black;
+	border : 0px solid black;
 }
 
 /*이미지부분*/
@@ -126,6 +128,7 @@ article{
 }
 .detail_thumbnail_wrap{
 	width: 200px;
+
 }
 .sosul_detail_img{
 	display: inline-block;
@@ -133,26 +136,19 @@ article{
 	height: auto;
 }
 .thumbnail_detail_img{
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-.thumbnail_img{
-	width: 200px;
-	max-height: 313px;
-}
-.thumbnail_border{
 	box-sizing: border-box;
-	opacity: .1;
 	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
+	width: 220px;
+	height: 296px;
+	position: relative;
+
+	background: url('../../sosulmate/img/resource.jpg') no-repeat;
+	background-size: cover;
+
+	border: 1px solid #D1D5D9;
 	left : 0;
 	top : 0;
 	z-index: 3;
-	border : 1px solid #000;
 }
 
 /*이미지아래 하트*/
@@ -263,17 +259,27 @@ article{
 }
 
 /*info부분*/
+
+.sosul_info_wrap, .sosul_detail_review_title_wrap{
+border-bottom: 2px solid #656464;
+display: flex;
+position: relative;
+
+}
+
 .sosul_info_title_wrap{
 
+padding-left: 10px;
+width: 100%;
 font-size: 25px;
 color: #333;
 font-weight: 700;
 word-break: keep-all;
 word-wrap: break-word;
 margin-top: 12px;
-border-bottom: 2px solid #656464;
-
 }
+
+
 .sosul_info_genre, .sosul_info_bar, .sosul_info_writer{
 	font-size: 12px;
 	color: #666
@@ -290,12 +296,16 @@ border-bottom: 2px solid #656464;
 }
 
 .sosul_info_detail{
-	padding : 15px 10px;
+	padding : 15px 10px 60px;
 }
 .sosul_info_detail > span {
-	font-size: 12px;
+	font-size: 15px;
 }
 .sosul_info_btn{
+	margin-right : 3px;
+	padding-top: 5px;
+	margin-top: 15px;
+	height: 30px;
 	border: 1px solid #E50020;
 	border-radius: 3px;
 	color: #E50020;
@@ -305,6 +315,145 @@ border-bottom: 2px solid #656464;
 }
 
 
+/*댓글타이틀*/
+.detail_review_title{
+padding-left: 10px;
+width: 100%;
+font-size: 20px;
+color: #333;
+font-weight: 700;
+word-break: keep-all;
+word-wrap: break-word;
+margin-top: 12px;
+
+}
+/*별점*/
+.sosul_detail_star_wrap{
+	padding-top: 15px;
+	display: flex;
+	padding-left: 15px;
+
+}
+.sosul_detail_star_infowrap{
+	text-align: center;
+}
+.sosul_detail_star_title{
+	font-size: 12px;
+}
+.sosul_detail_star_num{
+	font-size: 25px;
+	font-weight: 700;
+}
+.sosul_detail_img_num{
+	width: 110px;
+}
+.sosul_detail_img_num > img {
+ width: 18px;
+ height: 18px;
+}
+
+.sosul_detail_star_img{
+	align-items: center;
+	padding-left: 60px;
+}
+.sosul_detail_star_img > img {
+	padding-right: 30px;
+	width: 88px;
+	height : 60px;
+}
+/*댓글입력창*/
+.sosul_detail_textarea{
+padding-top: 10px;
+}
+
+.sosul_detail_textarea > textarea {
+	align-items: center;
+	width: 670px;
+	height: 100px;
+	outline-width: 0px;
+	margin-left: 20px;
+}
+
+.sosul_detail_checkbox{
+	padding-top : 3px;
+	float: right;
+}
+
+/*댓글리스트*/
+.sosul_comment_list_wrap{
+	padding-top: 60px;
+	width: 100%;
+
+}
+
+.sosul_comment_title{
+	padding-right: 5px;
+	float: right;
+}
+.sosul_comment_title>a{
+	font-size: 13px;
+}
+
+.sosul_comment_info{
+	font-size: 13px;
+}
+.sosul_comment_content_wrap{
+	padding-left: 15px;
+	border-top: 1px solid #656464;
+	border-bottom : 1px solid #D1D5D9;
+	margin-top: 23px;
+	padding-top: 10px;
+}
+.sosul_comment_content_nick{
+	display: flex;
+	justify-content: space-between;
+}
+.sosul_comment_star{
+	width: 150px;
+	height : 20px;
+}
+.sosul_comment_star > img {
+	width: 20px;
+	height : 20px;
+}
+.sosul_com_nick{
+	font-size:14px;
+	font-weight: 700;
+}
+.sosul_com_lv{
+	font-size: 12px;
+	padding-left: 3px;
+}
+.sosul_comment_content{
+	padding-top: 8px;
+}
+.sosul_comment_content_info{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.sosul_comment_content_info > div {
+	padding-right: 5px;
+}
+.sosul_comment_more{
+	padding : 10px 0;
+	margin-top: 10px;
+	text-align: center;
+	width: 100%;
+	border : 1px solid #D1D5D9;
+	border-radius: 3px;
+}
+.fa-caret-down{
+	padding-left : 5px;
+}
+
+/*bookmark*/
+.sosul_detail_bookmark{
+	display: flex;
+	margin-top: -2px;
+}
 
 
 
@@ -352,13 +501,17 @@ border-bottom: 2px solid #656464;
 						<div class="page_detail_wrap">
 							<div class="sosul_detail_body_wrap">
 								<section class="sosul_detail_body">
-									<h1 class="">소설제목인디 히든이여~</h1>
+									
+									<div class="sosul_detail_bookmark">
+										<img src="../../sosulmate/img/icons8-bookmark-red.png">
+									</div>
+									
 									<article class="sosul_detail_header">
 
 										<div class="sosul_header_info_wrap">
 											<div class="sosul_info_wrap">
 												<div class="sosul_info_title_wrap">
-													<span>제목입니다요~</span>
+													<span class="sosul_info_title">제목입니다요~</span>
 													<span class="sosul_info_genre">로맨스판타지</span>
 													<span class="sosul_info_bar">|</span>
 													<span class="sosul_info_writer">작가임다</span>
@@ -378,7 +531,87 @@ border-bottom: 2px solid #656464;
 													<span>완벽한 황후였다. 
 															그가 원하는 건 배우자이지 동료가 아니라 한다. 황제는 나비에를 버리고 노예 출신의 여자를 옆에 두었다. 그래도 괜찮았다. 황제가 그녀에게 다음 황후 자리를 약속하는 걸 듣기 전까진. 나비에는 고민 끝에 결심했다. 그렇다면 난 옆 나라의 황제와 재혼하겠다고.</span></div>
 											</div>
-											
+
+											<div class="sosul_detail_review_wrap">
+												<div class="sosul_detail_review_title_wrap">
+													<div class="detail_review_title">
+														<span>리뷰</span>
+														<span>(10)</span>
+													</div>
+												</div>
+
+												<div class="sosul_detail_star_wrap">
+													<div class="sosul_detail_star_infowrap">
+														<div class="sosul_detail_star_title">
+															<strong>별점</strong>(20명)
+														</div>
+														<div class="sosul_detail_star_num">5.0</div>
+														<div class="sosul_detail_img_num">
+															<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+															<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+															<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+															<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+															<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+														</div>
+													</div>
+													<div class="sosul_detail_star_img">
+														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+													</div>
+												</div>
+
+												<div class="sosul_detail_textarea_wrap">
+												<div class="sosul_detail_textarea">
+													<textarea style="resize: none;" placeholder="리뷰를 남겨주세요!"></textarea>
+												</div>
+
+												<div class="sosul_detail_checkbox">
+													<input type="checkbox" name="">
+													스포일러 표시
+													<button class="smallBtn_red">글쓰기</button>
+												</div>
+												</div>
+
+												<div class="sosul_comment_list_wrap">
+													<div class="sosul_comment_list_title">
+														<div class="sosul_comment_title">
+															<a href="">최신순</a>
+															<span>|</span>
+															<a href="">공감순</a>
+														</div>
+													</div>
+
+													<div class="sosul_comment_content_wrap">
+														<div class="sosul_comment_content_nick">
+															<div class="sosul_comment_nick">
+																<span class="sosul_com_nick">닉네임</span>
+																<span class="sosul_com_lv">Lv.30</span>
+															</div>
+															<div class="sosul_comment_star">
+																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+															</div>
+														</div>
+														<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+														</div>
+														<div class="sosul_comment_content_info">
+															<div class="sosul_comment_info">2020.00.00</div>
+															<div><a href="" class="actionBtn_grey"><i class="far fa-thumbs-up"></i> 00</a></div>
+															<div><a href="" class="actionBtn_grey">신고</a></div>
+														</div>
+													</div>
+
+													<div class="sosul_comment_more">
+														<a href=""><span class="sosul_comment_more_txt">10개 더보기<i class="fas fa-caret-down"></i></span></a>
+													</div>
+												</div>
+											</div>
 										</div>
 										
 
@@ -387,8 +620,6 @@ border-bottom: 2px solid #656464;
 												<div class="detail_thumbnail_wrap">
 													<div class="sosul_detail_img">
 														<div class="thumbnail_detail_img">
-															<img class="thumbnail_img" src="../../sosulmate/img/resource.jpg">
-															<span class="thumbnail_border"></span>
 														</div>
 													</div>
 												</div>
@@ -419,7 +650,7 @@ border-bottom: 2px solid #656464;
 												</div>
 											</div>
 										</div>
-										<div class="sosul_detail_review"></div>
+										
 										
 									</article>									
 								</section>
