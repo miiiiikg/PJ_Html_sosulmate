@@ -5,47 +5,55 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
 	<title></title>
 	<style type="text/css">
-
 		/* menu */
+		.mypage_menu_wrap{
+			display: inline-block;
+		}
+		.mypage_home{
+			text-align: center;
+			font-weight: bold;
+		}
+		.mypage_home a{
+			padding: 10px;
+		}
+		.mypage_menu_wrap{
+			margin-right: 50px;
+		}
+		.mypage_menu_wrap div{
+			padding: 5px 5px 5px 10px;
+		}
+		.mypage_menu_wrap>div{
+			border-bottom: 2px solid #D1D5D9;
+		}
+		.mypage_menu_wrap>div>div>div{
+			padding-left: 13px;
+		}
+		.mypage_home{
+			font-size: 25px;
+		}
+		.mypage_info_header{
+			font-weight: bold;
+		}
+		.mypage_library_header{
+			font-weight: bold;
+		}
+		.mypage_info_wrap div{
+			font-size: 15px;
+		}
+		.mypage_library_wrap div{
+			font-size: 15px;
+		}
+
+		/* content */
 		.update_wrap{
 			display: flex;
 			justify-content: center;
 			width: 1000px;
 			margin: 0 auto;
 		}
-		.update_menu_wrap{
-			display: inline-block;
+		.update_content_wrap{
+			width: 688px;
 		}
-		.update_home{
-			text-align: center;
-			font-weight: bold;
-		}
-		.update_home a{
-			padding: 10px;
-		}
-		.update_menu_wrap{
-			margin-right: 50px;
-		}
-		.update_menu_wrap div{
-			padding: 5px 5px 5px 10px;
-		}
-		.update_menu_wrap>div{
-			border-bottom: 2px solid #D1D5D9;
-		}
-		.update_menu_wrap>div>div>div{
-			padding-left: 13px;
-		}
-		.update_home{
-			font-size: 25px;
-		}
-		.update_info_wrap div{
-			font-size: 15px;
-		}
-		.update_library_wrap div{
-			font-size: 15px;
-		}
-
-		/* content */
 		.line1, .line4{
 			border-top: 1px solid #D1D5D9;
 			border-bottom: 1px solid #D1D5D9;
@@ -58,15 +66,17 @@
 			font-size: 13px;
 		}
 		.update_content_table tr, .update_content_table td{
-			padding: 8px;
+			padding: 8px 13px;
 		}
 		.update_table_title{
 			font-weight: bold;
 			text-align: end;
 			vertical-align: top;
+			width: 143px;
+			background-color: #E0E0E0;
 		}
 		.update_table_content{
-			width: 405px;
+			width: 545px;
 		}
 		.update_nickname{
 			display: flex;
@@ -136,21 +146,25 @@
 </head>
 <body>
 	<div class="update_wrap">
-		<div class="update_menu_wrap">
-			<div class="update_home"><a href="#">마이페이지</a></div>
-			<div class="update_info_wrap ">
-				<div class="update_info_header"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;내 정보</div>
+		<div class="mypage_menu_wrap">
+			<div>
+				<div class="mypage_home">마이페이지</div>
+				<div class="mypage_info_header mypage_menu_select"><i class="fas fa-home"></i><a href="#">&nbsp;&nbsp;홈</a></div>
+			</div>
+
+			<div class="mypage_info_wrap ">
+				<div class="mypage_info_header"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;내 정보</div>
 				<div>
-					<div class="update_info_revice"><a href="#">정보 변경</a></div>
-					<div class="update_info_drop"><a href="#">회원탈퇴</a></div>
+					<div class="mypage_info_revice mypage_menu_select"><a href="#">정보 변경</a></div>
+					<div class="mypage_info_drop mypage_menu_select"><a href="#">회원 탈퇴</a></div>
 				</div>
 			</div>
-			<div class="update_library_wrap">
-				<div class="update_library_header"><i class="fas fa-book-open"></i>&nbsp;&nbsp;내 서재</div>
+			<div class="mypage_library_wrap">
+				<div class="mypage_library_header"><i class="fas fa-book-open"></i>&nbsp;&nbsp;내 서재</div>
 				<div>
-					<div class="update_write"><a href="#">내가 쓴 글</a></div>
-					<div class="update_review"><a href="#">리뷰 관리</a></div>
-					<div class="update_favor"><a href="#">선호작</a></div>
+					<div class="mypage_write mypage_menu_select"><a href="#">내가 쓴 글</a></div>
+					<div class="mypage_review mypage_menu_select"><a href="#">리뷰 관리</a></div>
+					<div class="mypage_favor mypage_menu_select"><a href="#">선호작</a></div>
 				</div>
 			</div>
 		</div>
@@ -159,8 +173,8 @@
 				<tr class="line1">
 					<td class="update_table_title">닉네임</td>
 					<td class="update_nickname update_table_content">
-						<div>징구</div>
-						<input type="button" class="update_nickname_btn update_btn" name="" value="닉네임 변경">
+						<div>징구</div>&nbsp;&nbsp;
+						<button type="button" class="update_nickname_btn update_btn" name="">닉네임 변경</button>
 					</td>
 				</tr>
 				<tr class="line2">
@@ -184,11 +198,13 @@
 						</div>
 						<div class="update_password_info_wrap">
 							<div class="update_password_info_title">비밀번호 변경 시 유의사항</div>
-							<div class="update_password_info_content"> - 8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력해주세요.</div>
-							<div class="update_password_info_content"> - 연속된 3자 이상의 같은 문자는 제한합니다.</div>
-							<div class="update_password_info_content"> - ID와 같은 비밀번호는 사용할 수 없습니다.</div>
+							<div class="update_password_info_content">&nbsp;&nbsp;- 8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력해주세요.</div>
+							<div class="update_password_info_content">&nbsp;&nbsp;- 연속된 3자 이상의 같은 문자는 제한합니다.</div>
+							<div class="update_password_info_content">&nbsp;&nbsp;- ID와 같은 비밀번호는 사용할 수 없습니다.</div>
 						</div>
-						<div class="update_password_input"><input type="button" class="update_password_btn update_btn" name="" value="비밀번호 변경"></div>
+						<div class="update_password_input">
+							<button type="button" class="update_password_btn update_btn" name="">비밀번호 변경</button>
+						</div>
 					</td>
 				</tr>
 				<tr class="line4">
@@ -279,7 +295,7 @@
 						<div class="keyword_select_wrap">
 							
 						</div>
-						<div class="update_password_input"><input type="button" class="update_keyword_btn update_btn" name="" value="키워드 설정"></div>
+						<div class="update_password_input"><button type="button" class="update_keyword_btn update_btn" name="">키워드 설정</button></div>
 					</td>
 				</tr>
 			</table>
@@ -291,8 +307,12 @@
 <script type="text/javascript">
 	$(function(){
 		/* 마이페이지 메뉴 선택시 굵기 변경 */
-		$('.update_menu_wrap > div > div a').click(function(){
-			$('.update_menu_wrap > div > div a').css('font-weight', 'normal');
+		$('.mypage_menu_select').click(function(){
+			$('.mypage_menu_select:eq(1)').css('font-weight', 'normal');
+			$('.mypage_menu_select:eq(2)').css('font-weight', 'normal');
+			$('.mypage_menu_select:eq(3)').css('font-weight', 'normal');
+			$('.mypage_menu_select:eq(4)').css('font-weight', 'normal');
+			$('.mypage_menu_select:eq(5)').css('font-weight', 'normal');
 			$(this).css('font-weight', 'bold');
 		});
 		
