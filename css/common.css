@@ -1,3 +1,6 @@
+/* fontawesome */
+<script src="https://kit.fontawesome.com/e2a7455480.js" crossorigin="anonymous"></script>
+
 /* 구글웹폰트 */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap') ;
 
@@ -160,7 +163,12 @@ input.smallInput{
 	border-radius: 3px;
 	width: 200px;
 }
-
+input.large{
+	padding: 10px 10px 10px 15px;	
+	border: 1px solid #D1D5D9;
+	border-radius: 3px;
+	width: 610px;
+}
 /*에러메세지 */
 .errorMessage{
 	visibility: hidden;
