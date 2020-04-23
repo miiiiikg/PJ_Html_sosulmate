@@ -29,7 +29,7 @@ article{
 .ranking_menu_genre_wrap{
 	position: relative;
 	height: 52px;
-	border-top : 1px solid #656464;
+
 	border-bottom : 1px solid #656464;
 	display: flex;
 	line-height: 48px;
@@ -220,7 +220,7 @@ article{
 	border : 0;
 	display: inline-block;
 	float: none;
-	padding: 0 2px;
+	
 	transition: all .3s ease;
 
 
@@ -229,7 +229,7 @@ article{
 	border-radius: 50px;
 	position: relative;
 	display: flex;
-	padding : 4px 5px;
+	padding : 4px 8px;
 	font-size: 10px;
 	line-height: 12px;
 	color: #666;
@@ -375,9 +375,16 @@ padding-top: 10px;
 }
 
 .sosul_detail_checkbox{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
 	padding-top : 3px;
 	float: right;
 }
+.sosul_detail_checkbox > span {
+	padding-right: 5px;
+}
+
 
 /*댓글리스트*/
 .sosul_comment_list_wrap{
@@ -400,21 +407,22 @@ padding-top: 10px;
 .sosul_comment_content_wrap{
 	padding-left: 15px;
 	border-top: 1px solid #656464;
-	border-bottom : 1px solid #D1D5D9;
-	margin-top: 23px;
+	
+	margin-top: 29px;
 	padding-top: 10px;
 }
 .sosul_comment_content_nick{
+	padding-top: 5px;
 	display: flex;
 	justify-content: space-between;
 }
 .sosul_comment_star{
-	width: 150px;
-	height : 20px;
+	width: 110px;
+	height : 15px;
 }
 .sosul_comment_star > img {
-	width: 20px;
-	height : 20px;
+	width: 15px;
+	height : 15px;
 }
 .sosul_com_nick{
 	font-size:14px;
@@ -447,6 +455,9 @@ padding-top: 10px;
 }
 .fa-caret-down{
 	padding-left : 5px;
+}
+.sosul_comment_content_c{
+border-bottom: 1px solid #D1D5D9;
 }
 
 /*bookmark*/
@@ -570,7 +581,7 @@ padding-top: 10px;
 
 												<div class="sosul_detail_checkbox">
 													<input type="checkbox" name="">
-													스포일러 표시
+													<span>스포일러 표시</span>
 													<button class="smallBtn_red">글쓰기</button>
 												</div>
 												</div>
@@ -585,27 +596,84 @@ padding-top: 10px;
 													</div>
 
 													<div class="sosul_comment_content_wrap">
-														<div class="sosul_comment_content_nick">
-															<div class="sosul_comment_nick">
-																<span class="sosul_com_nick">닉네임</span>
-																<span class="sosul_com_lv">Lv.30</span>
+														<div class="sosul_comment_content_c">
+															<div class="sosul_comment_content_nick">
+																<div class="sosul_comment_nick">
+																	<span class="sosul_com_nick">닉네임</span>
+																	<span class="sosul_com_lv">Lv.30</span>
+																</div>
+																<div class="sosul_comment_star">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">							
+																</div>
 															</div>
-															<div class="sosul_comment_star">
-																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
-																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
-																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
-																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
-																<img src="../../sosulmate/img/icons8-star-detail-yello.png">
+															<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+															</div>
+															<div class="sosul_comment_content_info">
+																<div class="sosul_comment_info">2020.00.00</div>
+																<div><a href="" class="actionBtn_grey"><i class="far fa-thumbs-up"></i> 00</a></div>
+																<div><a href="" class="actionBtn_grey">신고</a></div>
 															</div>
 														</div>
-														<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+
+														<div class="sosul_comment_content_c">
+															<div class="sosul_comment_content_nick">
+																<div class="sosul_comment_nick">
+																	<span class="sosul_com_nick">닉네임</span>
+																	<span class="sosul_com_lv">Lv.30</span>
+																</div>
+																<div class="sosul_comment_star">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																</div>
+															</div>
+															<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+															</div>
+															<div class="sosul_comment_content_info">
+																<div class="sosul_comment_info">2020.00.00</div>
+																<div><a href="" class="actionBtn_grey"><i class="far fa-thumbs-up"></i> 00</a></div>
+																<div><a href="" class="actionBtn_grey">신고</a></div>
+															</div>
 														</div>
-														<div class="sosul_comment_content_info">
-															<div class="sosul_comment_info">2020.00.00</div>
-															<div><a href="" class="actionBtn_grey"><i class="far fa-thumbs-up"></i> 00</a></div>
-															<div><a href="" class="actionBtn_grey">신고</a></div>
+
+
+														<div class="sosul_comment_content_c">
+															<div class="sosul_comment_content_nick">
+																<div class="sosul_comment_nick">
+																	<span class="sosul_com_nick">닉네임</span>
+																	<span class="sosul_com_lv">Lv.30</span>
+																</div>
+																<div class="sosul_comment_star">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+																</div>
+															</div>
+															<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+															</div>
+															<div class="sosul_comment_content_info">
+																<div class="sosul_comment_info">2020.00.00</div>
+																<div><a href="" class="actionBtn_grey"><i class="far fa-thumbs-up"></i> 00</a></div>
+																<div><a href="" class="actionBtn_grey">신고</a></div>
+															</div>
 														</div>
+
+
+													
+
+
+														
+														
 													</div>
+
 
 													<div class="sosul_comment_more">
 														<a href=""><span class="sosul_comment_more_txt">10개 더보기<i class="fas fa-caret-down"></i></span></a>
@@ -670,4 +738,5 @@ padding-top: 10px;
 	</div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>

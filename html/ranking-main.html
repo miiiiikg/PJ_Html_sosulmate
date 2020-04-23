@@ -239,16 +239,16 @@ a{
 				<div class="ranking_menu_plat_contain">
 					<ul>
 						<li class="rank_menu_active">
-							<a href="">네이버시리즈</a>
+							<a href="#" >네이버시리즈</a>
 						</li>
-						<li>
-							<a href="">카카오페이지</a>
+						<li class="rank_menu_active">
+							<a href="#">카카오페이지</a>
 						</li>
-						<li>
-							<a href="">문피아</a>
-						</li>
-						<li>
-							<a href="">리디북스</a>
+						<li class="rank_menu_active">
+							<a href="#">문피아</a>
+						</li >
+						<li class="rank_menu_active">
+							<a href="#">리디북스</a>
 						</li>
 					</ul>
 				</div>
@@ -258,25 +258,25 @@ a{
 					<div class="ranking_menu_plat_contain">
 						<ul>
 							<li>
-								<a href="">전체</a>
+								<a href="#">전체</a>
 							</li>
 							<li>
-								<a href="">로맨스</a>
+								<a href="#">로맨스</a>
 							</li>
 							<li>
-								<a href="">로맨스판타지</a>
+								<a href="#">로맨스판타지</a>
 							</li>
 							<li>
-								<a href="">BL</a>
+								<a href="#">BL</a>
 							</li>
 							<li>
-								<a href="">판타지</a>
+								<a href="#">판타지</a>
 							</li>
 							<li>
-								<a href="">무협</a>
+								<a href="#">무협</a>
 							</li>
 							<li>
-								<a href="">라이트노벨</a>
+								<a href="#">라이트노벨</a>
 							</li>
 						</ul>
 					</div>
@@ -449,4 +449,21 @@ a{
 	</div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		$('.ranking_menu_plat_contain a').click(function(){
+			$('.ranking_menu_plat_contain a').css('color', '#2F3138')
+											 .css('border', '2px solid white');
+			$(this).css('color', '#E50020')
+					.css('border', '2px solid #E50020');
+		});
+
+	});
+	
+	
+
+	
+</script>
 </html>
