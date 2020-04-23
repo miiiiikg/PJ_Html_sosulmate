@@ -155,6 +155,25 @@ li{
 	border-radius: 5px;
 }
 
+/* 버튼 hover */
+.smallBtn_red:hover, .middleBtn_red:hover, .largeBtn_red:hover{
+	background-color: #ffdbe0;
+	border-color: #ffdbe0;
+	color:#E50020;
+}
+.smallBtn_white:hover, .largeBtn_white:hover{
+	background-color: #ffdbe0;
+    	border-color: #E50020; 
+	color: #E50020;
+}
+.middleBtn_white:hover{
+	background-color: #ffdbe0;
+	color: #E50020;	
+}
+.smallBtn_grey:hover, .middleBtn_grey:hover, .largeBtn_grey:hover{
+	background-color: #9E9E9E;
+}
+
 /*입력창*/
 input.smallInput{
 	padding: 10px 10px 10px 15px;	
