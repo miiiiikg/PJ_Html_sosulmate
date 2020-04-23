@@ -162,15 +162,19 @@ li{
 	color:#E50020;
 }
 .smallBtn_white:hover, .largeBtn_white:hover{
-	background-color: #ffdbe0;
-    	border-color: #E50020; 
+	background-color: #fff;
+ 	border-color: #ffdbe0; 
 	color: #E50020;
 }
 .middleBtn_white:hover{
 	background-color: #ffdbe0;
 	color: #E50020;	
 }
-.smallBtn_grey:hover, .middleBtn_grey:hover, .largeBtn_grey:hover{
+.smallBtn_grey:hover, .middleBtn_grey:hover{
+	background-color: #fff;
+ 	border-color: #333333; 
+}
+.largeBtn_grey:hover{
 	background-color: #9E9E9E;
 }
 
