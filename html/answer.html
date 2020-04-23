@@ -34,8 +34,38 @@
 			line-height: 44px;
 			border: 1px dashed #D1D5D9;
 		}
-		.answer_btn{
+		.answer_btnBox{
 			margin-top: 15px;
+		}
+		.answer_btnBox > button{
+			width: 300px;
+			height: 45px;
+		}
+		.answer_btn{
+			margin-left: 10px;
+		}
+		.info_msg{
+			font-size: 13px;
+			color: #3A3A3A;
+		}
+		#answer_select{
+			padding: 8px 10px 9px 15px;
+			margin-bottom: 1px;
+    		border: 1px solid #D1D5D9;
+    		border-radius: 3px;
+    		width: 610px;
+    		-webkit-appearance: none;
+    		outline: none;
+		}
+		.answer_selectBox > i{
+			float: right;
+			right: 174px;
+    		top: 7px;
+    		color: #00000099;
+    		position: relative;
+		}
+		.text_info{
+			display: none;
 		}
 	</style>
 </head>
@@ -73,6 +103,18 @@
 				</div>
 				<div class="answer_inputBox">
 					<div class="answer_info">연락 수단<span class="highlight">*</span></div>
+					<div class="answer_selectBox">
+						<select id="answer_select">
+							<option value="email">이메일</option>
+							<option value="text">문자</option>
+						</select>
+						<i class="fas fa-sort-down"></i>
+					</div>
+					<div class="info_msg">안내 받으실 방법을 선택해 주세요.</div>
+					<div class="errorMessage">필수 정보입니다.</div>
+				</div>
+				<div class="answer_inputBox text_info">
+					<div class="answer_info">연락처<span class="highlight">*</span></div>
 					<input type="" name="" class="largeInput">
 					<div class="errorMessage">필수 정보입니다.</div>
 				</div>
@@ -85,8 +127,9 @@
 						<ul class="mailbox-attachments clearfix uploadedList"></ul>
 					</div>
 				</div>
-				<div>
-					<button class="middleBtn_red answer_btn">제출</button>
+				<div class="answer_btnBox">
+					<button class="middleBtn_white cancle_btn">취소</button>
+					<button type="button" class="middleBtn_red answer_btn">제출</button>
 				</div>
 			</form>
 		</div>
@@ -94,9 +137,23 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
+	$(function(){
+		$('#answer_select').change(function(){
+			var info = $(this).val().trim();
+			console.log(info);
+			if(info == 'text'){
+				$('.text_info').css('display','block');
+			} else{
+				$('.text_info').css('display','none');
+			}
+		});
+	});
+	/* input에 focus되면 css 변경 */
 	$(document).on('focus','.answer_inputBox',function(){
 		$(this).children('.largeInput').css('border','1px solid #E50020');
 		$(this).children('textarea').css('border','1px solid #E50020');
+		$(this).children('.answer_select').children('select').css('border','1px solid #E50020');
 	});
+	/*$(document).on($('#selmail').change(function(){)*/
 </script>
 </html>

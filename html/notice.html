@@ -12,9 +12,11 @@
 		}
 		.notice_content_list > li{
 			border-bottom: 1px solid #D1D5D9;
-			font-size: 17px;
 			padding: 15px 7px;
 			cursor: pointer;
+		}
+		.notice_content_list > li:hover{
+			color: #E50020;
 		}
 		.twinkle{
 			animation-name: twinkle;
@@ -31,13 +33,9 @@
 			align-items: center;
 			margin: 0 0 20px;
 		}
-		.faq_btnBox > div{
-			padding: 0 85px;
-			border: 1px solid #E50020;
-			border-radius: 5px;
-			color: #E50020;
-			font-size: 16px;
+		.middleBtn_white{
 			font-weight: bold;
+			width: 233px;
 			height: 50px;
 			text-align: center;
 			line-height: 48px;
@@ -52,6 +50,7 @@
 			font-style: italic;
 			margin: 0 0 10px;
 		}
+		
 	</style>
 </head>
 <body>
@@ -73,9 +72,9 @@
 			<h1>공지사항</h1>
 			<div class="search_result">""에 대한 개의 결과</div>
 			<div class="faq_btnBox">
-				<div><a href="#">회원가입</a></div>
-				<div><a href="#">활용 도움말</a></div>
-				<div>이용문의</div>
+				<div class="middleBtn_white"><a href="#">회원가입</a></div>
+				<div class="middleBtn_white"><a href="#">활용 도움말</a></div>
+				<div class="middleBtn_white"><a href="#">이용문의</a></div>
 			</div>
 			<div class="notice_content_box notice_join">
 				<h2>회원가입</h2>
