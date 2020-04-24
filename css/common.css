@@ -66,33 +66,33 @@ li{
 
 /*작은 버튼*/
 .smallBtn_red{
-	padding: 7px 14px;	
+	padding: 5px 10px;	
 	border-radius: 6px;
 	border: 1px solid #E50020;
 	background-color: #E50020;
 	color: white;
-	font-size: 15px;
+	font-size: 13px;
 }
 .smallBtn_white{
-	padding: 7px 14px;	
+	padding: 5px 10px;	
 	border-radius: 6px;
 	border: 1px solid #E50020;
 	background-color: white;
 	color: #E50020;
-	font-size: 15px;
+	font-size: 13px;
 }
 .smallBtn_grey{
-	padding: 7px 14px;	
+	padding: 5px 10px;	
 	border-radius: 6px;
 	border: 1px solid #D1D5D9;
 	background-color: white;
-	color: #D1D5D9;
-	font-size: 15px;
+	color: #333333;
+	font-size: 13px;
 }
 
 /*중간 버튼*/
 .middleBtn_red{
-    width: 180px;
+	width: 180px;
     height: 50px;
     border: 1px solid white;
     border-radius: 5px;
@@ -118,7 +118,7 @@ li{
     border: 1px solid #D1D5D9;
     border-radius: 5px;
     background-color: white;
-    color: #D1D5D9;
+    color: #333333;
     font-size: 18px;
     margin: -5px 0px 13px 0px;
 }
@@ -145,7 +145,7 @@ li{
 	border-radius: 5px;
 }
 .largeBtn_grey{
-	border: none;
+	border: 1px solid #D1D5D9;
 	width: 387px;
 	height: 50px;
 	background-color: #D1D5D9;
@@ -155,27 +155,25 @@ li{
 	border-radius: 5px;
 }
 
-/* 버튼 hover */
+
+/*버튼 hover*/
 .smallBtn_red:hover, .middleBtn_red:hover, .largeBtn_red:hover{
-	background-color: #ffdbe0;
-	border-color: #ffdbe0;
-	color: #ed6c7e;
+	background-color: #be001b;
+	border-color: #be001b;
+	color: white;
 }
-.smallBtn_white:hover, .largeBtn_white:hover{
-	background-color: #fff;
- 	border-color: #ffdbe0; 
-	color: #ed6c7e;
-}
-.middleBtn_white:hover{
-	background-color: #ffdbe0;
-	color: #E50020;	
+.smallBtn_white:hover, .middleBtn_white:hover, .largeBtn_white:hover{
+	background-color: white;
+	border-color: #be001b; 
+	color: #be001b;
 }
 .smallBtn_grey:hover, .middleBtn_grey:hover{
 	background-color: #fff;
- 	border-color: #333333; 
+	border-color: #333333; 
 }
 .largeBtn_grey:hover{
 	background-color: #9E9E9E;
+	border-color: #9E9E9E; 
 }
 
 /*입력창*/
@@ -217,7 +215,7 @@ input.largeInput{
     color: #656464;
 }
 .smallSearch > input{
-    border: 1px solid #D1D5D9;
+	border: 1px solid #D1D5D9;
     border-radius: 6px;
     color: #888;
     font-size: 13px;
@@ -236,7 +234,7 @@ input.largeInput{
 }
 
 .largeSearch > input{
-    border: 1px solid #D1D5D9;
+	border: 1px solid #D1D5D9;
     border-radius: 6px;
     color: #888;
     font-size: 15px;
@@ -256,6 +254,7 @@ input.largeInput{
 	padding: 2px 7px;
 	margin: 2px;
 	font-size: 11px;
+	cursor: pointer;
 }
 .actionBtn_red {
 	display: inline-block;
@@ -266,6 +265,7 @@ input.largeInput{
 	padding: 2px 7px;
 	margin: 2px;
 	font-size: 11px;
+	cursor: pointer;
 
 }
 
@@ -305,7 +305,7 @@ a.topmenuBtn{
 
 /*상단바*/
 .topmenu_wrap{
-	width: 100%;
+   width: 100%;
 }
 .topmenu_Bar{
 	display: flex;
