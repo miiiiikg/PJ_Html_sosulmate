@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>문의내역</title>
-	<link rel="stylesheet" type="text/css" href="common.css">
-	<link rel="stylesheet" type="text/css" href="help_common.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/help_common.css">
 	<script src="https://kit.fontawesome.com/e2a7455480.js" crossorigin="anonymous"></script>
 	<style type="text/css">
 		.help_common_content_wrap > h1{
@@ -44,10 +44,11 @@
 		/* list box */
 		.answerList_check{
 			font-size: 13px;
-			min-width: 68px;
+			min-width: 66px;
 			padding: 3px 10px;
 			border-radius: 5px;
 			display: inline-block;
+			text-align: center;
 		}
 		.check_default{
 			background-color: #9E9E9E;
@@ -59,6 +60,7 @@
 		}
 		.answerList_list{
 			display: flex;
+			justify-content: space-between;
 			align-items: center;
 			border-bottom: 1px solid #D1D5D9;
 		}
@@ -82,7 +84,7 @@
 		.list_main_title:hover{
 			color: #656464;
 		}
-		.list_regdate{
+		.list_date{
 			width: 157px;
 			text-align: center;
 		}
@@ -92,32 +94,67 @@
 		}
 
 		/* request */
+		.list_two{
+			/* display: none; */
+		}
 		.answerList_request{
-			width: 1000px;
-			padding-bottom: 10px;
-			border-bottom: 1px solid #D1D5D9;
+			margin: 20px 0 20px 0;
+			padding: 10px;
+			color: #656464;
+			font-size: 15px;
+			background-color: #f9f9f9;
+			min-height: 265px;
 		}
-		.request_title{
-			border-bottom: 1px solid #D1D5D9;
-			max-width: 66%;
-			padding-bottom: 20px;
-		}
-		.request_container{
+		.request_content_wrap{
 			display: flex;
 			justify-content: space-between;
 		}
-		.request_main{
-			flex: 0 0 66%;
+		.request_contentBox{
+			flex: 0 0 65%;
+			max-width: 65%;
 		}
-		.request_question{
-			border-bottom: 1px solid #D1D5D9;
-			padding: 20px 0;
+		.request_content_title{
+			padding-left: 20px;
+		}
+		.request_content{
+			padding: 20px 20px;
+		}
+		.request_admin{
+			border-top: 1px solid #D1D5D9;
 		}
 		.request_sidebar{
 			flex: 0 0 auto;
 			padding: 0 20px;
-			width: 30%;
 			background-color: #D1D5D9;
+			width: 27%;
+			height: 245px;
+    		border-radius: 6px;
+    		font-size: 13px;
+		}
+		.request_details{
+			border-bottom: 1px solid #333333;
+			padding-bottom: 20px;
+		}
+		.request_details:last-child{
+			border: none;
+		}
+		.request_details > div{
+			margin-top: 20px;
+		}
+		.request_details > div > span:first-child{
+			width: 32%;
+    		display: inline-block;
+		}
+		.details_detail{
+			color: #333333;
+		}
+		.request_fontStyle{
+			color: #9e9e9e;
+			font-size: 13px;
+		}
+
+		.answerList_line{
+			border-bottom: 1px solid #D1D5D9;
 		}
 	</style>
 </head>
@@ -152,43 +189,74 @@
 					<div class="list_regdate">등록일</div>
 					<div class="list_state">상태</div>
 				</div>
-				<div class="answerList_list list_one">
-					<div class="list_title">이용문의 또 드립니다 <br>왜 처리를 이렇게 늦게하시는 거죵? <br>빨리빨리좀 해주세요</div>
-					<div class="list_regdate">2020년 14월 29일</div>
-					<div class="list_state">
-						<span class="answerList_check check_default">처리중</span>
-					</div>
-				</div>
-
-				<div class="answerList_request">
-					<h2 class="request_title"></h2>
-					<div class="request_container">
-						<div class="request_main">
-							<ul>
-								<li class="request_box">
-									<div class="request_contents">우아 보고싶다 완성된거</div>
-								</li>
-								<li class="request_box">
-									<div class="request_writer">관리자</div>
-									<div class="request_date">2020년 4월 21일</div>
-									<div class="request_contents">안녕<br><br>오늘이야<br><br><br>반가워<br><br>감사해</div>
-								</li>
-							</ul>
+				<ul>
+					<li>
+						<div class="answerList_list list_one">
+							<div class="list_title">이용문의 또 드립니다 <br>왜 처리를 이렇게 늦게하시는 거죵? <br>빨리빨리좀 해주세요</div>
+							<div class="list_date">2020년 14월 29일</div>
+							<div class="list_state">
+								<span class="answerList_check check_default">처리중</span>
+							</div>
 						</div>
-						<div class="request_sidebar"></div>
-					</div>
-				</div>
-
-
-				<div class="answerList_list list_one">
-					<div class="list_title">이용문의 드립니다</div>
-					<div class="list_regdate">2020년 4월 20일</div>
-					<div class="list_state">
-						<span class="answerList_check check_point">답변완료</span>
-					</div>
-				</div>
+						<div class="list_two">
+							<div class="answerList_request">
+								<h2 class="request_title"></h2>
+								<div class="request_content_wrap">
+									<div class="request_contentBox">
+										<div class="request_content_title request_fontStyle">내용</div>
+										<div class="request_content">
+											<div>우아 보고싶다 완성된거</div>
+										</div>
+										<div class="request_content request_admin">
+											<div class="request_writer">관리자</div>
+											<div class="request_date request_fontStyle">2020년 4월 21일</div>
+											<div class="request_content">안녕<br><br>오늘이야<br><br><br>반가워<br><br>감사해</div>
+										</div>
+										
+									</div>
+									<div class="request_sidebar">
+										<div class="request_details">
+											<div>
+												<span>요청자</span>
+												<span class="details_detail">asd1234</span>	
+											</div>
+											<div>
+												<span>등록일</span>
+												<span class="details_detail">2020년 00월 00일 00:00</span>
+											</div>
+										</div>
+										<div class="request_details">
+											<div>
+												<span>상태</span>
+												<span class="answerList_check check_default">처리중</span>	
+											</div>
+											<div>
+												<span>연락수단</span>
+												<span class="details_detail">이메일</span>
+											</div>
+											<div>
+												<span>연락처</span>
+												<span class="details_detail">&nbsp;--&nbsp;</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="answerList_line"></div>
+						</div>
+					</li>
+					<li>
+						<div class="answerList_list list_one">
+							<div class="list_title">이용문의 드립니다</div>
+							<div class="list_regdate">2020년 4월 20일</div>
+							<div class="list_state">
+								<span class="answerList_check check_point">답변완료</span>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</div>
-
+		
 		</div>
 	</div>
 </body>
