@@ -465,6 +465,12 @@ border-bottom: 1px solid #D1D5D9;
 	display: flex;
 	margin-top: -2px;
 }
+.sosul_detail_bookmark button{
+	border : none;
+	background : none;
+	margin-top: -2px;
+}
+
 
 
 
@@ -473,30 +479,30 @@ border-bottom: 1px solid #D1D5D9;
 <body>
 	<div class="sosul_detail_view_wrap">
 		<div class="ranking_menu_wrap">
-			<div class="ranking_menu_genre">
-				<div class="ranking_menu_genre_wrap">
-					<div class="ranking_menu_plat_contain">
+			<div class="topmenu_wrap">
+				<div class="topmenu_Bar">
+					<div class="topmenu_contain">
 						<ul>
 							<li>
-								<a href="">전체</a>
+								<a href="#">전체</a>
 							</li>
 							<li>
-								<a href="">로맨스</a>
+								<a href="#">로맨스</a>
 							</li>
 							<li>
-								<a href="">로맨스판타지</a>
+								<a href="#">로맨스판타지</a>
 							</li>
 							<li>
-								<a href="">BL</a>
+								<a href="#">BL</a>
 							</li>
 							<li>
-								<a href="">판타지</a>
+								<a href="#">판타지</a>
 							</li>
 							<li>
-								<a href="">무협</a>
+								<a href="#">무협</a>
 							</li>
 							<li>
-								<a href="">라이트노벨</a>
+								<a href="#">라이트노벨</a>
 							</li>
 						</ul>
 					</div>
@@ -504,7 +510,6 @@ border-bottom: 1px solid #D1D5D9;
 			</div>
 		</div>
 
-				
 		<div class="sosul_detail_view_contentwrap">
 			<div class="sosul_view_content">
 				<div>
@@ -514,7 +519,10 @@ border-bottom: 1px solid #D1D5D9;
 								<section class="sosul_detail_body">
 									
 									<div class="sosul_detail_bookmark">
-										<img src="../../sosulmate/img/icons8-bookmark-red.png">
+										<button onclick="changeimg()">
+										<img src="../../sosulmate/img/icons8-bookmark-nocolor.png" id="img1">
+										
+										</button>
 									</div>
 									
 									<article class="sosul_detail_header">
@@ -534,8 +542,6 @@ border-bottom: 1px solid #D1D5D9;
 											    	</div>
 												
 											</div>
-
-											
 
 											<div class="sosul_info_detail_wrap">
 												<div class="sosul_info_detail">
@@ -665,13 +671,7 @@ border-bottom: 1px solid #D1D5D9;
 																<div><a href="" class="actionBtn_grey">신고</a></div>
 															</div>
 														</div>
-
-
 													
-
-
-														
-														
 													</div>
 
 
@@ -718,25 +718,40 @@ border-bottom: 1px solid #D1D5D9;
 												</div>
 											</div>
 										</div>
-										
-										
 									</article>									
 								</section>
 							</div>
 						</div>
-						
 					</div>
-					
 				</div>
-				
 			</div>
-
-			
 		</div>	
-
-		
 	</div>
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.topmenu_contain a').click(function(){
+			$('.topmenu_contain a').css('color', '#2F3138')
+											 .css('border', '2px solid white');
+			$(this).css('color', '#E50020')
+					.css('border', '2px solid #E50020');
+		});
+	});	
+
+	var cnt = 1;
+	function changeimg(){
+		var img1 = document.getElementById("img1");
+		var img = document.getElementById("img2");
+		
+		if(cnt%2==1){
+			img1.src="../../sosulmate/img/icons8-bookmark-red.png";
+
+		}else{
+			img1.src="../../sosulmate/img/icons8-bookmark-nocolor.png";
+
+		}
+		cnt++;
+	}
+</script>
 </html>

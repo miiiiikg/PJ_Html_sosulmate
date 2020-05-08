@@ -179,6 +179,7 @@
 	resize: none;
 }
 .reply_input_btn{
+	background: none;
 	border : none;
 	font-weight: bold;
 }
@@ -213,9 +214,11 @@
 .reply_re_btn{
 	padding : 0 1px;
 	border : none;
+	background: none;
 	font-size: 13px;
 }
 .reply_re_del_or_warn{
+	background: none;
 	padding : 0 1px;
 	border : none;
 	font-size: 13px;
@@ -243,6 +246,7 @@ color: #E50020;
 }
 .reply_refresh_btn{
 	border : none;
+	background : none;
 }
 .reply_refresh_btn > i {
 	padding-right: 3px;
@@ -253,27 +257,28 @@ color: #E50020;
 <body>
 	<div class="community_view_wrap">
 		<div class="ranking_menu_wrap">
-			<div class="ranking_menu_genre">
-				<div class="ranking_menu_genre_wrap">
-					<div class="ranking_menu_plat_contain">
+			<div class="topmenu_wrap">
+				<div class="topmenu_Bar">
+					<div class="topmenu_contain">
 						<ul>
 							<li>
-								<a href="">자유</a>
+								<a href="#">자유</a>
 							</li>
 							<li>
-								<a href="">후기</a>
+								<a href="#">후기</a>
 							</li>
 							<li>
-								<a href="">작품공지</a>
+								<a href="#">작품공지</a>
 							</li>
 							<li>
-								<a href="">작가토크</a>
+								<a href="#">작가토크</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<div class="community_content_wrap">
 			<div class="community_content_detail">
@@ -378,4 +383,14 @@ color: #E50020;
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+		$(function(){
+		$('.topmenu_contain a').click(function(){
+			$('.topmenu_contain a').css('color', '#2F3138')
+											 .css('border', '2px solid white');
+			$(this).css('color', '#E50020')
+					.css('border', '2px solid #E50020');
+		});
+	});	
+</script>
 </html>

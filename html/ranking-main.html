@@ -22,7 +22,6 @@ a{
 .ranking_menu_plat_wrap{
 	position: relative;
 	height: 52px;
-	border-bottom : 1px solid #656464;
 	border-top : 1px solid #656464;
 	display: flex;
 	line-height: 48px;
@@ -69,9 +68,9 @@ a{
 	border-color : #E50020;
 	color : #E50020;
 
-
-	
 }
+
+
 
 /*메뉴장르바*/
 .ranking_menu_genre_wrap{
@@ -254,9 +253,11 @@ a{
 				</div>
 			</div>
 			<div class="ranking_menu_genre">
-				<div class="ranking_menu_genre_wrap">
-					<div class="ranking_menu_plat_contain">
-						<ul>
+				<div class="ranking_menu_wrap">
+					<div class="topmenu_wrap">
+						<div class="topmenu_Bar">
+							<div class="topmenu_contain">
+							<ul>
 							<li>
 								<a href="#">전체</a>
 							</li>
@@ -282,6 +283,8 @@ a{
 					</div>
 				</div>
 			</div>
+		</div>
+			</div>
 			
 		</div>
 	
@@ -294,7 +297,7 @@ a{
 							<div class="sosul_rank_img_content">
 								<div class="sosul_ranking_img_thumbnail_wrap">
 									<div class="ranking_sosul_thumbnail">
-										<img class = "rank_thumbnail"src="../../sosulmate/img/resource.jpg">
+										<a href=""><img class = "rank_thumbnail"src="../../sosulmate/img/resource.jpg"></a>
 										<span></span>
 									</div>
 									<a href=""><span class="sosul_rank_hidden">상세페이지 바로가기</span></a>
@@ -459,11 +462,15 @@ a{
 			$(this).css('color', '#E50020')
 					.css('border', '2px solid #E50020');
 		});
-
 	});
-	
-	
 
-	
+	$(function(){
+		$('.topmenu_contain a').click(function(){
+			$('.topmenu_contain a').css('color', '#2F3138')
+ 								   .css('border', '2px solid white');
+			$(this).css('color', '#E50020')
+				   .css('border', '2px solid #E50020');
+		});
+	});
 </script>
 </html>
