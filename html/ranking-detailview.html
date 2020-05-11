@@ -183,7 +183,7 @@ article{
 	font-size: 0;
 	overflow: hidden;
 	
-	background: url(../../sosulmate/img/icons8-heart-50.png) center center no-repeat;
+
 	background-size: 100% 100%;
 }
 .good_heart_cnttext{
@@ -248,6 +248,7 @@ article{
 	position: relative;
 	justify-content: center;
 	padding-bottom: 10px;
+	padding-top : 10px;
 }
 .sosul_share_sns > a{
 	
@@ -351,22 +352,44 @@ margin-top: 12px;
  width: 18px;
  height: 18px;
 }
+.starR1{
+	background: url('../../sosulmate/img/ico_review.png') no-repeat -120px 0;
+	background-size: auto 100%;
+	width: 35px;
+	height: 70px;
+	float: left;
+	text-indent: -9999px;
+	cursor: pointer;
 
-.sosul_detail_star_img{
-	align-items: center;
-	padding-left: 60px;
 }
-.sosul_detail_star_img > img {
-	padding-right: 30px;
-	width: 88px;
-	height : 60px;
+.starR2{
+	background: url('../../sosulmate/img/ico_review.png') no-repeat right 0;
+	background-size: auto 100%;
+	width: 35px;
+	height: 70px;
+	float: left;
+	text-indent: -9999px;
+	cursor: pointer;
+	margin-right: 20px;
+
 }
+.starR1.on{
+	background-position: 0 0;
+}
+.starR2.on{
+	background-position: -35px 0;
+}
+.starRev_wrap{
+	padding-left: 65px;
+}
+
 /*댓글입력창*/
 .sosul_detail_textarea{
 padding-top: 10px;
 }
 
 .sosul_detail_textarea > textarea {
+	padding : 10px;
 	align-items: center;
 	width: 670px;
 	height: 100px;
@@ -460,6 +483,59 @@ padding-top: 10px;
 border-bottom: 1px solid #D1D5D9;
 }
 
+/*댓글스포일러*/
+.alert_article{
+	background : #f2f4f5;
+	border-radius: 3px;
+	padding : 27px 0;
+	text-align: center;
+	display: block;
+}
+.alert_description{
+	color: #808991;
+	line-height: 1.5em;
+}
+.alert_icon{
+	text-indent: -444px;
+	font-size: 0;
+	overflow: hidden;
+	background: url(../../sosulmate/img/icons8-high-risk-50.png)center center no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	vertical-align: -6%;
+	margin-right : 2px;
+
+}
+.alert_detail_link{
+	border : 0;
+	box-shadow: none;
+	outline : 0;
+	text-decoration: none;
+	display: inline-block;
+	background : 0 0;
+	color: #808991;
+	line-height: 1.5em;
+	font-weight: 700;
+}
+.alert_detail_link:after{
+	content: '';
+	width: 7px;
+	height: 10px;
+	margin-left: 4px;
+	display: inline-block;
+	text-indent: -444px;
+	font-size: 0;
+	overflow: hidden;
+	background: url(../../sosulmate/img/icons8-double-right-50.png) center center no-repeat;
+	background-size:  100% 100%;
+
+}
+.spoiler_alert+.comment_content{
+	display: none;
+}
+
 /*bookmark*/
 .sosul_detail_bookmark{
 	display: flex;
@@ -520,8 +596,7 @@ border-bottom: 1px solid #D1D5D9;
 									
 									<div class="sosul_detail_bookmark">
 										<button onclick="changeimg()">
-										<img src="../../sosulmate/img/icons8-bookmark-nocolor.png" id="img1">
-										
+											<img src="../../sosulmate/img/icons8-bookmark-nocolor.png" id="img1">
 										</button>
 									</div>
 									
@@ -571,12 +646,19 @@ border-bottom: 1px solid #D1D5D9;
 															<img src="../../sosulmate/img/icons8-star-detail-yello.png">
 														</div>
 													</div>
-													<div class="sosul_detail_star_img">
-														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-														<img src="../../sosulmate/img/icons8-star-detail-gray.png">
+													<div class="starRev_wrap">
+														<div class="starRev">
+															<span class="starR1">별1_왼</span>
+															<span class="starR2">별1_오</span>
+															<span class="starR1">별2_왼</span>
+															<span class="starR2">별2_오</span>
+															<span class="starR1">별3_왼</span>
+															<span class="starR2">별3_오</span>
+															<span class="starR1">별4_왼</span>
+															<span class="starR2">별4_오</span>
+															<span class="starR1">별5_왼</span>
+															<span class="starR2">별5_오</span>
+														</div>
 													</div>
 												</div>
 
@@ -616,7 +698,8 @@ border-bottom: 1px solid #D1D5D9;
 																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">							
 																</div>
 															</div>
-															<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+															<div class="sosul_comment_content">
+																<p class="comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ</p>
 															</div>
 															<div class="sosul_comment_content_info">
 																<div class="sosul_comment_info">2020.00.00</div>
@@ -639,7 +722,17 @@ border-bottom: 1px solid #D1D5D9;
 																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
 																</div>
 															</div>
-															<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
+															<div class="sosul_comment_content">
+																<div class="spoiler_alert">
+																	<article class="alert_article">
+																		<p class="alert_description">
+																			<span class="alert_icon"></span>
+																			스포일러가 있는 리뷰입니다. <br>
+																			<button class="alert_detail_link" type="button">리뷰보기</button>
+																		</p>
+																	</article>
+																</div>
+																<p class="comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ</p>
 															</div>
 															<div class="sosul_comment_content_info">
 																<div class="sosul_comment_info">2020.00.00</div>
@@ -647,31 +740,6 @@ border-bottom: 1px solid #D1D5D9;
 																<div><a href="" class="actionBtn_grey">신고</a></div>
 															</div>
 														</div>
-
-
-														<div class="sosul_comment_content_c">
-															<div class="sosul_comment_content_nick">
-																<div class="sosul_comment_nick">
-																	<span class="sosul_com_nick">닉네임</span>
-																	<span class="sosul_com_lv">Lv.30</span>
-																</div>
-																<div class="sosul_comment_star">
-																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-																	<img src="../../sosulmate/img/icons8-star-detail-gray.png">
-																</div>
-															</div>
-															<div class="sosul_comment_content">오늘 점심은 버거킹~ 머쉬룸 와퍼 주니어 세트 존맛존맛<br>복수하겠다....<br>ㅂㄷㅂㄷㅂㄷ
-															</div>
-															<div class="sosul_comment_content_info">
-																<div class="sosul_comment_info">2020.00.00</div>
-																<div><a href="" class="actionBtn_grey"><i class="far fa-thumbs-up"></i> 00</a></div>
-																<div><a href="" class="actionBtn_grey">신고</a></div>
-															</div>
-														</div>
-													
 													</div>
 
 
@@ -693,11 +761,9 @@ border-bottom: 1px solid #D1D5D9;
 												</div>
 											</div>
 											<div class="detail_sosul_good">
-												<button type="button" class="sosul_good_btn">
-													<span class="good_btn_content">
-														<span class="good_heart_icon"></span>
-														<span class="good_heart_cnttext">1000</span>
-													</span>													
+												<button type="button" class="sosul_good_btn" onclick="heartimg()">
+													 <img src="../../sosulmate/img/icons8-heart-50.png" id="heart1" class="good_heart_icon">
+													<span class="good_heart_cnttext">1000</span>
 												</button>
 											</div>
 											<div class="sosul_detail_palce_wrap">
@@ -753,5 +819,29 @@ border-bottom: 1px solid #D1D5D9;
 		}
 		cnt++;
 	}
+
+$('.starRev span').click(function(){
+	$(this).parent().children('span').removeClass('on');
+	$(this).addClass('on').prevAll('span').addClass('on');
+	return false;
+});	
+	
+	var goodcnt = 1;
+	function heartimg(){
+		var heart1 = document.getElementById("heart1");
+
+		if(goodcnt%2==1){
+			heart1.src="../../sosulmate/img/icons8-heart-50full.png";
+		}else{
+			heart1.src="../../sosulmate/img/icons8-heart-50.png";
+		}
+		goodcnt++;
+	}
+
+	$('.alert_detail_link').click(function(){
+		$('.spoiler_alert').css('display', 'none');
+		$(this).hide();
+		$('.comment_content').css('display', 'block');
+	});
 </script>
 </html>
