@@ -95,7 +95,7 @@
 
 		/* request */
 		.list_two{
-			/* display: none; */
+			display: none;
 		}
 		.answerList_request{
 			margin: 20px 0 20px 0;
@@ -121,6 +121,9 @@
 		}
 		.request_admin{
 			border-top: 1px solid #D1D5D9;
+		}
+		.request_admin > div:last-child{
+			padding-top: 20px;
 		}
 		.request_sidebar{
 			flex: 0 0 auto;
@@ -210,7 +213,7 @@
 										<div class="request_content request_admin">
 											<div class="request_writer">관리자</div>
 											<div class="request_date request_fontStyle">2020년 4월 21일</div>
-											<div class="request_content">안녕<br><br>오늘이야<br><br><br>반가워<br><br>감사해</div>
+											<div>안녕<br><br>오늘이야<br><br><br>반가워<br><br>감사해</div>
 										</div>
 										
 									</div>
@@ -260,4 +263,20 @@
 		</div>
 	</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var click = 1;
+		
+		$('.list_one').click(function(){
+			if(click == 1){
+				$(this).next().css('display','block');
+				click = 0;
+			} else{
+				$(this).next().css('display','none');	
+				click = 1;
+			}
+		});	
+	});
+</script>
 </html>
