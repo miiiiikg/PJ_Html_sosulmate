@@ -77,20 +77,38 @@
 			margin-left: 35px;
 			margin-top: 17px;
 		}
+		.mypage_info_cur{
+			display: flex;
+			justify-content: space-between;
+		}
+		.mypage_info_cur_count{
+			line-height: 20px;
+		}
 		.mypage_info_level_wrap{
 			display: flex;
 			flex-direction: column;
 		}
-		.mypage_info_fill{
+		.mypage_info_fill_wrap{
+			overflow: hidden;
+			position: relative;
 			border: none;
 			border-radius: 50%;
-			background-color: #FFD966;
+			background-color: #ffecb3;
 			width: 100px;
 			height: 100px;
 		}
+		.mypage_info_fill{
+			position: absolute;
+			bottom: 0px;
+			border: none;
+			background-color: #FFD966;
+			width: 100px;
+			height: 0px;
+			text-align: center;
+		}
 		
 		.mypage_info_level{
-			padding-left: 28px; 
+			padding-left: 25px; 
 		}
 		.mypage_cur_write, .mypage_cur_review{
 			font-size: 15px;
@@ -133,12 +151,18 @@
 				<div class="mypage_info_id">징구(pjj0647)</div>
 				<div class="mypage_info_content">
 					<div class="mypage_info_level_wrap">
-						<div class="mypage_info_fill"></div>
+						<div class="mypage_info_fill_wrap"><div class="mypage_info_fill">85%</div></div>
 						<div class="mypage_info_level">Lv. 30</div>
 					</div>
 					<div class="mypage_info_cur_wrap">
-						<div class="mypage_cur_write"><i class="fas fa-pen"></i>&nbsp;작성한 글</div>
-						<div class="mypage_cur_review"><i class="fas fa-comment-dots"></i>&nbsp;작성한 리뷰</div>
+						<div class="mypage_info_cur">
+							<div class="mypage_cur_write"><i class="fas fa-pen"></i>&nbsp;작성한 글</div>
+							<div class="mypage_cur_count">5</div>
+						</div>
+						<div class="mypage_info_cur">
+							<div class="mypage_cur_review"><i class="fas fa-comment-dots"></i>&nbsp;작성한 리뷰</div>
+							<div class="mypage_cur_count">20</div>
+						</div>
 						<div class="mypage_nextlevel">다음 레벨까지 <strong style="color: red;">10 리뷰</strong> 남았습니다.</div>
 					</div>
 				</div>
@@ -158,6 +182,10 @@
 			$('.mypage_menu_select:eq(5)').css('font-weight', 'normal');
 			$(this).css('font-weight', 'bold');
 		});
+
+		/* 마이페이지 리뷰 퍼센트만큼 채우기 */
+		var heightVal=$('.mypage_info_fill').text();
+		$('.mypage_info_fill').animate({height:heightVal}, 1000);
 	});
 
 </script>
