@@ -22,12 +22,13 @@
 		.answerList_searchBox{
 			display: flex;
 			justify-content: flex-start;
-		    margin-bottom: 60px;
+		    margin: 5px auto 60px;
+		    float: right;
 		}
 		#answerList_select{
 			padding: 8px 10px 9px 15px;
 			margin-left: 10px;
-    		border: 1px solid #D1D5D9;
+    		border: 1px solid #d1d5d9;
     		border-radius: 3px;
     		width: 100px;
     		-webkit-appearance: none;
@@ -51,18 +52,19 @@
 			text-align: center;
 		}
 		.check_default{
-			background-color: #9E9E9E;
+			background-color: #9e9e9e;
 			color: #fff;
 		}
 		.check_point{
-			background-color: #E50020;
+			background-color: #e50020;
 			color: #fff;
 		}
 		.answerList_list{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			border-bottom: 1px solid #D1D5D9;
+			border-bottom: 1px solid #d1d5d9;
+			width: 1120px;
 		}
 		.answerList_list > div{
 			padding: 20px 20px;
@@ -79,7 +81,7 @@
 			cursor: pointer;
 		}
 		.list_title:hover{
-			color: #E50020;
+			color: #e50020;
 		}
 		.list_main_title:hover{
 			color: #656464;
@@ -104,6 +106,7 @@
 			font-size: 15px;
 			background-color: #f9f9f9;
 			min-height: 265px;
+			border-radius: 5px;
 		}
 		.request_content_wrap{
 			display: flex;
@@ -120,7 +123,7 @@
 			padding: 20px 20px;
 		}
 		.request_admin{
-			border-top: 1px solid #D1D5D9;
+			border-top: 1px solid #d1d5d9;
 		}
 		.request_admin > div:last-child{
 			padding-top: 20px;
@@ -128,7 +131,7 @@
 		.request_sidebar{
 			flex: 0 0 auto;
 			padding: 0 20px;
-			background-color: #D1D5D9;
+			background-color: #d1d5d9;
 			width: 27%;
 			height: 245px;
     		border-radius: 6px;
@@ -157,7 +160,7 @@
 		}
 
 		.answerList_line{
-			border-bottom: 1px solid #D1D5D9;
+			border-bottom: 1px solid #d1d5d9;
 		}
 	</style>
 </head>
@@ -170,7 +173,6 @@
 			</ul>
 		</div>
 		<div class="help_common_content_wrap">
-			<h1>문의내역</h1>
 			<form method="" action="">
 				<div class="answerList_searchBox">
 					<div class="largeSearch">
@@ -186,6 +188,8 @@
 					<i class="fas fa-sort-down"></i>
 				</div>
 			</form>
+			<h1>문의내역</h1>
+			
 			<div class="answerList_list_wrap">
 				<div class="answerList_list list_main"> 
 					<div class="list_title list_main_title">제목</div>
