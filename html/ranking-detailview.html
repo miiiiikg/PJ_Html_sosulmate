@@ -335,7 +335,7 @@ margin-top: 12px;
 	padding-left: 15px;
 
 }
-.sosul_detail_star_infowrap{
+.sosul_detail_star_title, .sosul_detail_star_num{
 	text-align: center;
 }
 .sosul_detail_star_title{
@@ -348,10 +348,7 @@ margin-top: 12px;
 .sosul_detail_img_num{
 	width: 110px;
 }
-.sosul_detail_img_num > img {
- width: 18px;
- height: 18px;
-}
+
 .starR1{
 	background: url('../img/ico_review.png') no-repeat -120px 0;
 	background-size: auto 100%;
@@ -381,6 +378,22 @@ margin-top: 12px;
 }
 .starRev_wrap{
 	padding-left: 65px;
+}
+
+.star-rating{
+	width: 110px;
+}
+.star-rating, .star-rating span {
+	display: inline-block;
+	height: 20px;
+	overflow: hidden;
+	background: url('../img/star.png') no-repeat;
+
+}
+.star-rating span {
+	background-position: left bottom;
+	line-height: 0;
+	vertical-align: top;
 }
 
 /*댓글입력창*/
@@ -435,18 +448,31 @@ padding-top: 10px;
 	padding-top: 10px;
 }
 .sosul_comment_content_nick{
+	padding-right: 10px;
 	padding-top: 5px;
 	display: flex;
 	justify-content: space-between;
 }
 .sosul_comment_star{
-	width: 110px;
-	height : 15px;
+	width: 95px;
+	height : 17px;
 }
-.sosul_comment_star > img {
-	width: 15px;
-	height : 15px;
+.star-rating-comm{
+	width: 95px;
 }
+.star-rating-comm, .star-rating-comm span {
+	display: inline-block;
+	height: 17px;
+	overflow: hidden;
+	background: url('../img/star-comm.png') no-repeat;
+
+}
+.star-rating-comm span {
+	background-position: left bottom;
+	line-height: 0;
+	vertical-align: top;
+}
+
 .sosul_com_nick{
 	font-size:14px;
 	font-weight: 700;
@@ -638,14 +664,13 @@ border-bottom: 1px solid #D1D5D9;
 															<strong>별점</strong>(20명)
 														</div>
 														<div class="sosul_detail_star_num">5.0</div>
-														<div class="sosul_detail_img_num">
-															<img src="../img/icons8-star-detail-yello.png">
-															<img src="../img/icons8-star-detail-yello.png">
-															<img src="../img/icons8-star-detail-yello.png">
-															<img src="../img/icons8-star-detail-yello.png">
-															<img src="../img/icons8-star-detail-yello.png">
+														<div class="wrap-star">
+															<div class="star-rating">
+																<span style="width:80%"></span>
+															</div>
 														</div>
 													</div>
+													
 													<div class="starRev_wrap">
 														<div class="starRev">
 															<span class="starR1">별1_왼</span>
@@ -691,11 +716,9 @@ border-bottom: 1px solid #D1D5D9;
 																	<span class="sosul_com_lv">Lv.30</span>
 																</div>
 																<div class="sosul_comment_star">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">							
+																	<div class="star-rating-comm">
+																		<span style="width:10%"></span>
+																	</div>					
 																</div>
 															</div>
 															<div class="sosul_comment_content">
@@ -715,11 +738,9 @@ border-bottom: 1px solid #D1D5D9;
 																	<span class="sosul_com_lv">Lv.30</span>
 																</div>
 																<div class="sosul_comment_star">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
-																	<img src="../img/icons8-star-detail-gray.png">
+																	<div class="star-rating-comm">
+																		<span style="width:50%"></span>
+																	</div>					
 																</div>
 															</div>
 															<div class="sosul_comment_content">
@@ -811,10 +832,10 @@ border-bottom: 1px solid #D1D5D9;
 		var img = document.getElementById("img2");
 		
 		if(cnt%2==1){
-			img1.src="../img/icons8-bookmark-red.png";
+			img1.src="../../sosulmate/img/icons8-bookmark-red.png";
 
 		}else{
-			img1.src="../img/icons8-bookmark-nocolor.png";
+			img1.src="../../sosulmate/img/icons8-bookmark-nocolor.png";
 
 		}
 		cnt++;
