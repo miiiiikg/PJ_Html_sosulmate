@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>sosulmate_index</title>
-	<link rel="stylesheet" type="text/css" href="../sosulmate/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
 	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
@@ -108,7 +108,7 @@
 			padding: 20px 10px;
 		}
 
-		/*신간=========================================================================*/
+		/*신간 리스트*/
 		.index_new_wrap {
 			max-width: 1150px;
 			margin : 0 auto;
@@ -202,7 +202,7 @@
 			white-space: normal;
 			word-break: keep-all;
 		}
-		/*추천========================================================================================*/
+		/*추천 리스트*/
 		.index_recommend_wrap {
 			max-width: 1150px;
 			margin : 0 auto;
@@ -296,7 +296,7 @@
 			white-space: normal;
 			word-break: keep-all;
 		}
-		/*캐러셀================================================================================*/
+		/*캐러셀*/
 
 		
 		.center { 
@@ -308,8 +308,8 @@
 			position: absolute; 
 			z-index: 10; top: 50%; 
 			transform: translateY(-50%); 
-			width: 71px;
-			height: 71px; 
+			width: 45px;
+			height: 45px; 
 			border-radius: 100%; 
 			background: rgba(0, 0, 0, .5); 
 			border: none;
@@ -324,7 +324,7 @@
 			font-family: 'xeicon';
 		}
 		.center button.slick-prev { 
-			left: -90px; 
+			left: -65px; 
 			font-size: 0; 
 			color: transparent; 
 		}
@@ -333,7 +333,7 @@
 			font-family: 'xeicon'; 
 		}
 		.center button.slick-next { 
-			right: -90px; 
+			right: -65px; 
 			font-size: 0; 
 			color: transparent; 
 		}
@@ -368,10 +368,11 @@
 			position: absolute; 
 			z-index: 10; top: 50%; 
 			transform: translateY(-50%); 
-			width: 71px;
-			height: 71px; 
-			border-radius: 100%; 
-			background: rgba(0, 0, 0, .5); 
+			width: 40px;
+			height: 40px; 
+			border-radius: 100%;
+			box-shadow: rgba(0,0,0,0.33) 0px 0.8px 3px; 
+			background: white; 
 			border: none;
 		}
 		.recommend_book_list button.slick:before {
@@ -381,95 +382,21 @@
 		}
 		.recommend_book_list button.slick-prev:before { 
 			content: "\e93d"; 
+			color: black;
 			font-family: 'xeicon';
 		}
 		.recommend_book_list button.slick-prev { 
-			left: -90px; 
+			left: -56px; 
 			font-size: 0; 
 			color: transparent; 
 		}
 		.recommend_book_list button.slick-next:before { 
 			content: "\e940"; 
+			color: black;
 			font-family: 'xeicon'; 
 		}
 		.recommend_book_list button.slick-next { 
-			right: -90px; 
-			font-size: 0; 
-			color: transparent; 
-		}
-		.recommend_book_list { 
-			position: relative;
-			width: 980px;
-			margin: 0 auto;
-		}
-		.recommend_book_list button {
-			position: absolute; 
-			z-index: 10; top: 50%; 
-			transform: translateY(-50%); 
-			width: 71px;
-			height: 71px; 
-			border-radius: 100%; 
-			background: rgba(0, 0, 0, .5); 
-			border: none;
-		}
-		.recommend_book_list button.slick:before {
-			font-family: 'xeicon';
-			color: #fff;
-			font-size: 20px;
-		}
-		.recommend_book_list button.slick-prev:before { 
-			content: "\e93d"; 
-			font-family: 'xeicon';
-		}
-		.recommend_book_list button.slick-prev { 
-			left: -90px; 
-			font-size: 0; 
-			color: transparent; 
-		}
-		.recommend_book_list button.slick-next:before { 
-			content: "\e940"; 
-			font-family: 'xeicon'; 
-		}
-		.recommend_book_list button.slick-next { 
-			right: -90px; 
-			font-size: 0; 
-			color: transparent; 
-		}
-		.recommend_book_list { 
-			position: relative;
-			width: 980px;
-			margin: 0 auto;
-		}
-		.recommend_book_list button {
-			position: absolute; 
-			z-index: 10; top: 50%; 
-			transform: translateY(-50%); 
-			width: 71px;
-			height: 71px; 
-			border-radius: 100%; 
-			background: rgba(0, 0, 0, .5); 
-			border: none;
-		}
-		.recommend_book_list button.slick:before {
-			font-family: 'xeicon';
-			color: #fff;
-			font-size: 20px;
-		}
-		.recommend_book_list button.slick-prev:before { 
-			content: "\e93d"; 
-			font-family: 'xeicon';
-		}
-		.recommend_book_list button.slick-prev { 
-			left: -90px; 
-			font-size: 0; 
-			color: transparent; 
-		}
-		.recommend_book_list button.slick-next:before { 
-			content: "\e940"; 
-			font-family: 'xeicon'; 
-		}
-		.recommend_book_list button.slick-next { 
-			right: -90px; 
+			right: -56px; 
 			font-size: 0; 
 			color: transparent; 
 		}
@@ -482,10 +409,11 @@
 			position: absolute; 
 			z-index: 10; top: 50%; 
 			transform: translateY(-50%); 
-			width: 71px;
-			height: 71px; 
-			border-radius: 100%; 
-			background: rgba(0, 0, 0, .5); 
+			width: 40px;
+			height: 40px; 
+			border-radius: 100%;
+			box-shadow: rgba(0,0,0,0.33) 0px 0.8px 3px; 
+			background: white; 
 			border: none;
 		}
 		.new_book_list button.slick:before {
@@ -495,19 +423,21 @@
 		}
 		.new_book_list button.slick-prev:before { 
 			content: "\e93d"; 
+			color: black;
 			font-family: 'xeicon';
 		}
 		.new_book_list button.slick-prev { 
-			left: -90px; 
+			left: -56px; 
 			font-size: 0; 
 			color: transparent; 
 		}
 		.new_book_list button.slick-next:before { 
 			content: "\e940"; 
+			color: black;
 			font-family: 'xeicon'; 
 		}
 		.new_book_list button.slick-next { 
-			right: -90px; 
+			right: -56px; 
 			font-size: 0; 
 			color: transparent; 
 		}
@@ -517,16 +447,16 @@
 <body>
 	<section class="visual">
 		    <div class="center">
-		        <div><img src="sosulmate_img/index 예시 이미지/booklist1.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist2.png"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist3.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist4.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist5.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist6.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist7.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/booklist8.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/로맨스1.jpg"></div>
-				<div><img src="sosulmate_img/index 예시 이미지/로맨스2.jpg"></div>
+		        <div><img src="../img/booklist1.jpg"></div>
+				<div><img src="../img/booklist2.png"></div>
+				<div><img src="../img/booklist3.jpg"></div>
+				<div><img src="../img/booklist4.jpg"></div>
+				<div><img src="../img/booklist5.jpg"></div>
+				<div><img src="../img/booklist6.jpg"></div>
+				<div><img src="../img/booklist7.jpg"></div>
+				<div><img src="../img/booklist8.jpg"></div>
+				<div><img src="../img/로맨스1.jpg"></div>
+				<div><img src="../img/로맨스2.jpg"></div>
 		    </div>
     </section>
 
@@ -947,7 +877,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/1.jpg" class="recommend_book_oneimg">
+										<img src="../img/1.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -966,7 +896,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/2.jpg" class="recommend_book_oneimg">
+										<img src="../img/2.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -985,7 +915,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/3.jpg" class="recommend_book_oneimg">
+										<img src="../img/3.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1004,7 +934,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/4.jpg" class="recommend_book_oneimg">
+										<img src="../img/4.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1023,7 +953,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/5.jpg" class="recommend_book_oneimg">
+										<img src="../img/5.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1042,7 +972,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/6.jpg" class="recommend_book_oneimg">
+										<img src="../img/6.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1061,7 +991,7 @@
 							<a href="#" class="recommend_book_rank">
 								<div class="recommend_book_fullimg">
 									<div class="recommend_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/7.jpg" class="recommend_book_oneimg">
+										<img src="../img/7.jpg" class="recommend_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1093,7 +1023,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/1.jpg" class="new_book_oneimg">
+										<img src="../img/1.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1112,7 +1042,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/2.jpg" class="new_book_oneimg">
+										<img src="../img/2.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1131,7 +1061,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/3.jpg" class="new_book_oneimg">
+										<img src="../img/3.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1150,7 +1080,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/4.jpg" class="new_book_oneimg">
+										<img src="../img/4.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1169,7 +1099,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/5.jpg" class="new_book_oneimg">
+										<img src="../img/5.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1188,7 +1118,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/6.jpg" class="new_book_oneimg">
+										<img src="../img/6.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
@@ -1207,7 +1137,7 @@
 							<a href="#" class="new_book_rank">
 								<div class="new_book_fullimg">
 									<div class="new_book_smallimg">
-										<img src="../sosulmate/sosulmate_img/index 예시 이미지/7.jpg" class="new_book_oneimg">
+										<img src="../img/7.jpg" class="new_book_oneimg">
 										<div></div>
 									</div>
 								</div>
